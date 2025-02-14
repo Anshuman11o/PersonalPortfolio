@@ -12,10 +12,12 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 
   return (
     <Link href={href}>
-      <a className={`text-sm font-medium transition-colors hover:text-primary
-        ${isActive ? "text-primary" : "text-muted-foreground"}`}>
+      <Button
+        variant="link"
+        className={`p-0 ${isActive ? "text-primary" : "text-muted-foreground"}`}
+      >
         {children}
-      </a>
+      </Button>
     </Link>
   );
 };
@@ -52,11 +54,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/">
-            <a className="mr-6 flex items-center space-x-2">
+          <Button variant="link" className="mr-6 p-0">
+            <Link href="/">
               <span className="font-bold">Portfolio</span>
-            </a>
-          </Link>
+            </Link>
+          </Button>
           <nav className="flex items-center space-x-6">
             <NavLinks />
           </nav>
