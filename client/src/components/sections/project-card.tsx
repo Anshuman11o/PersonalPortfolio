@@ -43,7 +43,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       </motion.div>
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6">
+        <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
             <DialogTitle className="text-3xl font-bold">{project.title}</DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground">
@@ -53,7 +53,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
           <div className="space-y-8 mt-6">
             {/* Main Project Image */}
-            <div className="relative h-[400px] overflow-hidden rounded-lg">
+            <div className="relative h-[400px] overflow-hidden rounded-lg border border-accent-gold/20">
               <img
                 src={project.imageUrl}
                 alt={project.title}
@@ -62,7 +62,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
 
             {/* Project Overview */}
-            <section className="space-y-4">
+            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
               <div className="prose prose-lg prose-blue max-w-none">
                 <p>{project.description}</p>
@@ -75,7 +75,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </section>
 
             {/* Key Features */}
-            <section className="space-y-4">
+            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                 <li>Feature 1 - Detailed explanation of the feature</li>
@@ -85,29 +85,29 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </section>
 
             {/* Project Gallery */}
-            <section className="space-y-4">
+            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               <div className="grid grid-cols-2 gap-4">
                 {/* Placeholder for additional project images */}
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
                   <p className="text-muted-foreground">Additional Image 1</p>
                 </div>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
                   <p className="text-muted-foreground">Additional Image 2</p>
                 </div>
               </div>
             </section>
 
             {/* Project Video */}
-            <section className="space-y-4">
+            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Demo Video</h3>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
+              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
                 <p className="text-muted-foreground">Project Demo Video Placeholder</p>
               </div>
             </section>
 
             {/* Technical Details */}
-            <section className="space-y-4">
+            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground">
