@@ -140,8 +140,18 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground">
-                  Overview of the technical skills, tools, and methodologies used in this role.
-                  Include both technical and soft skills developed during this experience.
+                  {experience.company === "Embee Software" && (
+                    "Python, Pandas, AI/ML, Natural Language Processing, PDF Processing, Data Extraction, API Integration"
+                  )}
+                  {experience.company === "UMass Robotics Club" && (
+                    "Unity Engine, C#, Telepresence Systems, Remote Interaction Technologies"
+                  )}
+                  {experience.company === "UMass Boxing Club" && (
+                    "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
+                  )}
+                  {experience.company === "Disability Services - University of Massachusetts Amherst" && (
+                    "LaTeX, Microsoft Word, Microsoft OneDrive, Overleaf, Document Formatting, FERPA Compliance"
+                  )}
                 </p>
               </div>
             </section>
