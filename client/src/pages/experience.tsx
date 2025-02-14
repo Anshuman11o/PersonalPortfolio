@@ -7,7 +7,7 @@ const EXPERIENCES: Experience[] = [
     id: 1,
     company: "Embee Software",
     role: "Software Development Intern",
-    description: "Developed an AI agent that processes news content, generating summaries and answering user questions, reducing the time spent reviewing company news by 10x for a client. Built a Python application using Pandas to extract and convert employee work hour data from PDF logs into standardized CSV files.",
+    description: "Developed an AI agent that processes news content, generating summaries and answering user questions, reducing the time spent reviewing company news by 10x for a client. Built a Python application using Pandas to extract and convert employee work hour data from PDF logs into standardized CSV files, enhancing payroll department efficiency by 20x.",
     imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028",
     githubUrl: null
   },
@@ -15,17 +15,17 @@ const EXPERIENCES: Experience[] = [
     id: 2,
     company: "UMass Robotics Club",
     role: "Software Team Member",
-    description: "Developing system design, modeling, and motion planning in Unity for Inverse Kinematics, enhancing humanoid robot movement. Contributing to the software sub-team for the Mass Robotics competition.",
+    description: "Contributing to the Unity Telepresence project, focusing on inverse kinematics and motion planning for humanoid robots. Working on system design and modeling to enhance robot movement capabilities for the Mass Robotics competition. Implementing advanced robotics algorithms and real-time control systems.",
     imageUrl: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb",
-    githubUrl: "https://github.com/Anshuman11o/umass-robotics"
+    githubUrl: "https://github.com/UMass-Robotics-Club/Unity-Telepresence"
   },
   {
     id: 3,
     company: "UMass Boxing Club",
     role: "Web Developer",
-    description: "Attended weekly sessions and designed a new scalable club website using HTML, CSS and JavaScript. Applied modern web development practices to create an engaging and responsive platform.",
+    description: "Designed and developed a modern, responsive website for the UMass Boxing Club using HTML, CSS, and JavaScript. Created an engaging platform that showcases club activities, training schedules, and member achievements. Implemented user-friendly navigation and mobile-responsive design.",
     imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
-    githubUrl: "https://github.com/Anshuman11o/boxing-club-website"
+    githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club"
   }
 ];
 

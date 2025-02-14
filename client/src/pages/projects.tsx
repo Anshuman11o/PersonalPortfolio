@@ -6,22 +6,22 @@ const PROJECTS: Project[] = [
   {
     id: 1,
     title: "WhatsApp Summarizer AI Agent",
-    description: "Built an AI agent to generate insightful summaries from diverse media inputs, including PDFs, images, audio, videos, Excel, Word, and PPTs, reducing user's time in content comprehension by 10x.",
-    githubUrl: "https://github.com/Anshuman11o/whatsapp-summarizer",
+    description: "Built an AI agent that processes various media inputs (PDFs, images, audio, videos, Excel, Word, PPTs) to generate comprehensive summaries. The agent uses OpenAI's GPT models for natural language processing, reducing content comprehension time by 10x. Features include multi-format support, intelligent summarization, and seamless WhatsApp integration.",
+    githubUrl: "https://github.com/Anshuman11o/whatsapp-summarizer-AI-agent",
     imageUrl: "https://images.unsplash.com/photo-1696446701796-da61225697cc"
   },
   {
     id: 2,
     title: "Movie Recommender System",
-    description: "Launched a web application that recommends personalized movie lists based on users' past preferences using content-based filtering with the TMDB API and cosine similarity.",
-    githubUrl: "https://github.com/Anshuman11o/movie-recommender",
+    description: "A sophisticated web application that provides personalized movie recommendations using content-based filtering. Leveraging the TMDB API and cosine similarity algorithms, the system analyzes user preferences to suggest relevant films. Built with Python, utilizing Pandas for data processing and Streamlit for the user interface.",
+    githubUrl: "https://github.com/Anshuman11o/Movie-Recommender-System",
     imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1"
   },
   {
     id: 3,
     title: "Stock Data Visualizer",
-    description: "Created a web application for real-time visualization of NASDAQ 100 stock prices, featuring dynamic graphs and data points to facilitate stock trend analysis for traders.",
-    githubUrl: "https://github.com/Anshuman11o/stock-visualizer",
+    description: "A real-time stock visualization platform for NASDAQ 100 stocks, featuring interactive charts and comprehensive market analysis tools. Built with JavaScript and Chart.js, the application provides traders with dynamic data visualization and trend analysis capabilities using the Alpha Vantage API.",
+    githubUrl: "https://github.com/Anshuman11o/Stock-Data-Generator",
     imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f"
   }
 ];
