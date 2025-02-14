@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Hero() {
   return (
@@ -19,10 +20,10 @@ export default function Hero() {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
-            <a href="#projects">
+            <Link href="/projects">
               View My Work
               <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
+            </Link>
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a href="mailto:contact@example.com">
