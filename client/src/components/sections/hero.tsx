@@ -12,11 +12,11 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          Hi, I'm <span className="bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">John Doe</span>
+          Hi, I'm <span className="bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">Anshuman Agarwal</span>
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-          A passionate full-stack developer focused on creating beautiful and user-friendly applications
-          that solve real-world problems.
+          Computer Science student at UMass Amherst with a passion for AI, web development, and robotics. 
+          Currently maintaining a 3.67 GPA and working on innovative projects that solve real-world problems.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button 
@@ -30,7 +30,7 @@ export default function Hero() {
             </Link>
           </Button>
           <Button variant="outline" size="lg" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
-            <a href="mailto:contact@example.com">
+            <a href="mailto:agarwal.anshuman1@gmail.com">
               Get in Touch
             </a>
           </Button>

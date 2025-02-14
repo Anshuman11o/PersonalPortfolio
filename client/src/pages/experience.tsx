@@ -2,37 +2,37 @@ import { useQuery } from "@tanstack/react-query";
 import ExperienceCard from "@/components/sections/experience-card";
 import type { Experience } from "@shared/schema";
 
-const SAMPLE_EXPERIENCES: Experience[] = [
+const EXPERIENCES: Experience[] = [
   {
     id: 1,
-    company: "Tech Corp",
-    role: "Senior Software Engineer",
-    description: "Led development of cloud-native applications using modern technologies",
-    imageUrl: "https://images.unsplash.com/photo-1496200186974-4293800e2c20",
-    githubUrl: "https://github.com/example/work1"
+    company: "Embee Software",
+    role: "Software Development Intern",
+    description: "Developed an AI agent that processes news content, generating summaries and answering user questions, reducing the time spent reviewing company news by 10x for a client. Built a Python application using Pandas to extract and convert employee work hour data from PDF logs into standardized CSV files.",
+    imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028",
+    githubUrl: null
   },
   {
     id: 2,
-    company: "Startup Inc",
-    role: "Full Stack Developer",
-    description: "Built and maintained multiple customer-facing applications",
-    imageUrl: "https://images.unsplash.com/photo-1529612700005-e35377bf1415",
-    githubUrl: "https://github.com/example/work2"
+    company: "UMass Robotics Club",
+    role: "Software Team Member",
+    description: "Developing system design, modeling, and motion planning in Unity for Inverse Kinematics, enhancing humanoid robot movement. Contributing to the software sub-team for the Mass Robotics competition.",
+    imageUrl: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb",
+    githubUrl: "https://github.com/Anshuman11o/umass-robotics"
   },
   {
     id: 3,
-    company: "Innovation Labs",
-    role: "Software Developer Intern",
-    description: "Developed innovative solutions for complex business problems",
-    imageUrl: "https://images.unsplash.com/photo-1554049697-02e809699995",
-    githubUrl: null
+    company: "UMass Boxing Club",
+    role: "Web Developer",
+    description: "Attended weekly sessions and designed a new scalable club website using HTML, CSS and JavaScript. Applied modern web development practices to create an engaging and responsive platform.",
+    imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
+    githubUrl: "https://github.com/Anshuman11o/boxing-club-website"
   }
 ];
 
 export default function Experience() {
   const { data: experiences, isLoading } = useQuery({
     queryKey: ["/api/experiences"],
-    initialData: SAMPLE_EXPERIENCES
+    initialData: EXPERIENCES
   });
 
   if (isLoading) {

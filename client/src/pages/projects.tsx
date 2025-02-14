@@ -2,34 +2,34 @@ import { useQuery } from "@tanstack/react-query";
 import ProjectCard from "@/components/sections/project-card";
 import type { Project } from "@shared/schema";
 
-const SAMPLE_PROJECTS: Project[] = [
+const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Project Management Dashboard",
-    description: "A modern project management tool built with React and TypeScript",
-    githubUrl: "https://github.com/example/project1",
-    imageUrl: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8"
+    title: "WhatsApp Summarizer AI Agent",
+    description: "Built an AI agent to generate insightful summaries from diverse media inputs, including PDFs, images, audio, videos, Excel, Word, and PPTs, reducing user's time in content comprehension by 10x.",
+    githubUrl: "https://github.com/Anshuman11o/whatsapp-summarizer",
+    imageUrl: "https://images.unsplash.com/photo-1696446701796-da61225697cc"
   },
   {
     id: 2,
-    title: "E-commerce Platform",
-    description: "Full-stack e-commerce solution with real-time inventory management",
-    githubUrl: "https://github.com/example/project2",
-    imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
+    title: "Movie Recommender System",
+    description: "Launched a web application that recommends personalized movie lists based on users' past preferences using content-based filtering with the TMDB API and cosine similarity.",
+    githubUrl: "https://github.com/Anshuman11o/movie-recommender",
+    imageUrl: "https://images.unsplash.com/photo-1536440136628-849c177e76a1"
   },
   {
     id: 3,
-    title: "Social Media Analytics",
-    description: "Analytics dashboard for social media performance tracking",
-    githubUrl: "https://github.com/example/project3",
-    imageUrl: "https://images.unsplash.com/photo-1510759395231-72b17d622279"
+    title: "Stock Data Visualizer",
+    description: "Created a web application for real-time visualization of NASDAQ 100 stock prices, featuring dynamic graphs and data points to facilitate stock trend analysis for traders.",
+    githubUrl: "https://github.com/Anshuman11o/stock-visualizer",
+    imageUrl: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f"
   }
 ];
 
 export default function Projects() {
   const { data: projects, isLoading } = useQuery({
     queryKey: ["/api/projects"],
-    initialData: SAMPLE_PROJECTS
+    initialData: PROJECTS
   });
 
   if (isLoading) {

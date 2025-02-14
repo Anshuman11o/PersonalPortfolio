@@ -1,0 +1,43 @@
+Anshuman Agarwal
+github.com/Anshuman11o|agarwal.anshuman1@gmail.com|linkedin.com/in/anshuman-agarwal-9071931b6|4134060391
+Education
+University of Massachusetts Amherst B.S. In Computer Sciences (Expected Graduation: May 27)
+GPA: 3.67/4
+• Coursework: Data Structures, C Programming, Discrete Math, Foundations of Programming in Python,
+Object Oriented Programming, Calculus II, Physics I, Calculus I
+• Awards: Dean’s List (Fall’23 & Spring’24)
+Work Experience
+Embee Software – Summer Internship | Mumbai, India (June’24 – August’24)
+• Developed an AI agent that processes news content, generating summaries and answering user
+questions, reducing the time spent reviewing company news by 10x for a client
+• AI agent ingests news content in text, audio, video, and URL formats, indexes it in Azure Blob Storage,
+and leverages Azure Cognitive Services and OpenAI APIs for content processing
+• Built a Python application for a client using Pandas to extract and convert employee work hour data
+from PDF logs into standardized CSV files
+• Enhanced payroll department efficiency by 20x, helping Embee secure application creation contract
+Projects
+WhatsApp Summarizer AI Agent (Github) (Jan’25 – Present)
+• Built an AI agent to generate insightful summaries from diverse media inputs, including PDFs, images,
+audio, videos, Excel, Word, and PPTs, reducing user’s time in content comprehension by 10x.
+• Designed with Python, Django, PyTorch to extract data, OpenAI API to analyze content and prepare
+format-specific summaries and Twilio API for seamless delivery to users.
+Movie Recommender System (Github) (Website) (July’24 – August’24)
+• Launched a web application that recommends personalized movie lists based on users' past
+preferences and allows them to discover popular and highly rated films
+• Implemented the recommendation system using content-based filtering with the TMDB API and cosine
+similarity in Python, developed in Jupyter Notebook, and deployed with Streamlit and Heroku
+Stock Data Visualizer (Github) (April’24 – May’24)
+• Created a web application for real-time visualization of NASDAQ 100 stock prices, featuring dynamic
+graphs and data points to facilitate stock trend analysis for traders
+• Built the app with JavaScript, HTML, CSS, using Chart.js to display dynamic graphs and fetching
+NASDAQ 100 stock data from the Alpha Vantage API
+Clubs
+Umass Robotics Club Member (Github) (Sep’24 – Present)
+• Developing system design, modeling, and motion planning in Unity for Inverse Kinematics, enhancing
+humanoid robot movement. Contributing to the software sub-team for the Mass Robotics competition
+Umass Boxing Club Member (Github) (Jan’24 – Present)
+• Attended weekly sessions and designed a new scalable club website using HTML, CSS and JavaScript
+Skills
+• Technical: Python (Jupyter, Pandas, Streamlit, PyTorch, Django), JavaScript, Java, SQL, C, C++, ROS
+• Tools: Azure (Storage, Cognitive Search, Cognitive Services, Core), Open AI, Git, Heroku, Postman
+• Languages: English, Hindi, Spanish, French

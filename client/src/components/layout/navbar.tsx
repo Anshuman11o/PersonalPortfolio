@@ -32,15 +32,15 @@ const NavLinks = () => (
 
 const SocialLinks = () => (
   <div className="flex items-center gap-4">
-    <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+    <a href="https://github.com/Anshuman11o" target="_blank" rel="noopener noreferrer"
       className="text-muted-foreground hover:text-primary transition-colors">
       <FaGithub className="h-5 w-5" />
     </a>
-    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+    <a href="https://linkedin.com/in/anshuman-agarwal-9071931b6" target="_blank" rel="noopener noreferrer"
       className="text-muted-foreground hover:text-primary transition-colors">
       <FaLinkedin className="h-5 w-5" />
     </a>
-    <a href="mailto:contact@example.com"
+    <a href="mailto:agarwal.anshuman1@gmail.com"
       className="text-muted-foreground hover:text-primary transition-colors">
       <MdEmail className="h-5 w-5" />
     </a>
