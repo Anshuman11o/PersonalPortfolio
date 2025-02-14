@@ -74,9 +74,41 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Feature 1 - Detailed explanation of the feature</li>
-                <li>Feature 2 - Comprehensive breakdown of functionality</li>
-                <li>Feature 3 - Technical implementation details</li>
+                {project.title === "WhatsApp Summarizer AI Agent" && (
+                  <>
+                    <li>Multi-format content processing (PDF, images, audio, videos, Excel, Word, PPTs)</li>
+                    <li>Real-time summarization through WhatsApp interface</li>
+                    <li>Context-aware Q&A capabilities</li>
+                  </>
+                )}
+                {project.title === "Movie Recommender System" && (
+                  <>
+                    <li>Content-based filtering with cosine similarity</li>
+                    <li>Top 5 similar movie suggestions</li>
+                    <li>Popular and highly-rated movie recommendations</li>
+                  </>
+                )}
+                {project.title === "Stock Data Visualizer" && (
+                  <>
+                    <li>Real-time NASDAQ 100 stock price tracking</li>
+                    <li>Dynamic graph visualization</li>
+                    <li>Custom trading metrics and indicators</li>
+                  </>
+                )}
+                {project.title === "Scrap Calculator Application" && (
+                  <>
+                    <li>Dimension input handling for metal sheets</li>
+                    <li>Production optimization algorithms</li>
+                    <li>Comprehensive error handling system</li>
+                  </>
+                )}
+                {project.title === "Cooking Inventory Management System" && (
+                  <>
+                    <li>User authentication and role management</li>
+                    <li>Real-time inventory tracking</li>
+                    <li>Automated calculations and reporting</li>
+                  </>
+                )}
               </ul>
             </section>
 
@@ -107,8 +139,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground">
-                  Detailed technical implementation, challenges faced, and solutions implemented.
-                  Include architecture decisions, tech stack, and any notable optimizations.
+                  {project.title === "WhatsApp Summarizer AI Agent" && (
+                    "Implemented using Python and Django for backend processing, PyTorch for data extraction, OpenAI API for content analysis, and Twilio API for WhatsApp integration. Utilized advanced NLP techniques for accurate summarization."
+                  )}
+                  {project.title === "Movie Recommender System" && (
+                    "Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration. Implemented vectorization and cosine similarity algorithms for movie matching."
+                  )}
+                  {project.title === "Stock Data Visualizer" && (
+                    "Developed using JavaScript and Chart.js for visualization, with Alpha Vantage API integration for real-time data. Implemented WebSocket connections for live updates and custom algorithms for trend analysis."
+                  )}
+                  {project.title === "Scrap Calculator Application" && (
+                    "Built using Python's Tkinter for GUI, incorporating custom algorithms for metal sheet optimization. Implemented SQLite database for data persistence and report generation capabilities."
+                  )}
+                  {project.title === "Cooking Inventory Management System" && (
+                    "Developed with Python Tkinter and SQLite3, featuring a layered architecture for separation of concerns. Implemented secure user authentication and real-time database operations."
+                  )}
                 </p>
               </div>
             </section>

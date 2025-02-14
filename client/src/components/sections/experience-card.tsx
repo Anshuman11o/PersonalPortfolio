@@ -82,9 +82,27 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Achievements</h3>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Achievement 1 - Quantifiable results and impact</li>
-                <li>Achievement 2 - Project outcomes and team contributions</li>
-                <li>Achievement 3 - Technical implementations and innovations</li>
+                {experience.company === "Embee Software" && (
+                  <>
+                    <li>Reduced news review time by 10x through AI implementation</li>
+                    <li>Enhanced payroll efficiency by 20x with automated data processing</li>
+                    <li>Developed scalable solutions for enterprise clients</li>
+                  </>
+                )}
+                {experience.company === "UMass Robotics Club" && (
+                  <>
+                    <li>Implemented core telepresence functionalities</li>
+                    <li>Enhanced remote interaction capabilities</li>
+                    <li>Collaborated on Unity-based development</li>
+                  </>
+                )}
+                {experience.company === "UMass Boxing Club" && (
+                  <>
+                    <li>Increased membership inquiries by 30%</li>
+                    <li>Reduced manual processing time by 40%</li>
+                    <li>Implemented full-stack web solutions</li>
+                  </>
+                )}
               </ul>
             </section>
 
