@@ -12,20 +12,24 @@ export default function Hero() {
         transition={{ duration: 0.5 }}
       >
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          Hi, I'm <span className="text-primary">John Doe</span>
+          Hi, I'm <span className="bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">John Doe</span>
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
           A passionate full-stack developer focused on creating beautiful and user-friendly applications
           that solve real-world problems.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button asChild size="lg">
+          <Button 
+            asChild 
+            size="lg"
+            className="bg-gradient-to-r from-primary to-accent-gold hover:opacity-90"
+          >
             <Link href="/projects">
               View My Work
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
             <a href="mailto:contact@example.com">
               Get in Touch
             </a>
