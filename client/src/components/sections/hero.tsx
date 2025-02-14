@@ -15,8 +15,8 @@ export default function Hero() {
           Hi, I'm <span className="bg-gradient-to-r from-primary to-accent-gold bg-clip-text text-transparent">Anshuman Agarwal</span>
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-          Computer Science student at UMass Amherst with a passion for AI, software development, and economics. 
-          I collaborate on innovative robotics projects, practice boxing, and explore how technology can drive innovation and informed decision-making.
+          Computer Science student at UMass Amherst with a passion for AI, software development, and robotics. 
+          I collaborate on innovative robotics projects and explore how technology can drive groundbreaking solutions and transformative change.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button 
