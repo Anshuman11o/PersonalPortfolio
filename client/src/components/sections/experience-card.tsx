@@ -103,6 +103,13 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <li>Implemented full-stack web solutions</li>
                   </>
                 )}
+                {experience.company === "University of Massachusetts Amherst" && (
+                  <>
+                    <li>Create accessible LaTeX documents for visually impaired students</li>
+                    <li>FERPA certified for handling sensitive student information</li>
+                    <li>Utilize Microsoft Office and Overleaf for document conversion</li>
+                  </>
+                )}
               </ul>
             </section>
 
