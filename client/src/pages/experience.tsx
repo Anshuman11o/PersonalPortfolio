@@ -1,3 +1,4 @@
+
 import { useQuery } from "@tanstack/react-query";
 import ExperienceCard from "@/components/sections/experience-card";
 import type { Experience } from "@shared/schema";
@@ -15,7 +16,7 @@ const EXPERIENCES: Experience[] = [
     id: 2,
     company: "UMass Robotics Club",
     role: "Software Team Member",
-    description: "Contributing to the Unity Telepresence project, focusing on inverse kinematics and motion planning for humanoid robots. Working on system design and modeling to enhance robot movement capabilities for the Mass Robotics competition. Implementing advanced robotics algorithms and real-time control systems.",
+    description: "Contributed to the Unity Telepresence project, focusing on developing telepresence capabilities using the Unity engine. Worked on implementing core functionalities in C# and collaborated with team members to enhance remote interaction through Unity-based applications.",
     imageUrl: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb",
     githubUrl: "https://github.com/UMass-Robotics-Club/Unity-Telepresence"
   },
@@ -23,7 +24,7 @@ const EXPERIENCES: Experience[] = [
     id: 3,
     company: "UMass Boxing Club",
     role: "Web Developer",
-    description: "Designed and developed a modern, responsive website for the UMass Boxing Club using HTML, CSS, and JavaScript. Created an engaging platform that showcases club activities, training schedules, and member achievements. Implemented user-friendly navigation and mobile-responsive design.",
+    description: "Developed a website using React, TypeScript, and Node.js, increasing membership inquiries by 30%. Implemented backend form submissions with Node.js and Express.js for event promotions and enrollments, reducing manual processing time by 40% and enhancing system efficiency.",
     imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
     githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club"
   }
