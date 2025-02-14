@@ -5,14 +5,6 @@ import type { Experience } from "@shared/schema";
 
 const EXPERIENCES: Experience[] = [
   {
-    id: 4,
-    company: "University of Massachusetts Amherst",
-    role: "Document Conversion Assistant",
-    description: "Assisting students with visual disability by providing them with accessible LaTeX notes, ensuring educational content accessibility through advanced document formatting and conversion techniques.",
-    imageUrl: "https://images.unsplash.com/photo-1532619187608-e5375cab36aa",
-    githubUrl: null
-  },
-  {
     id: 1,
     company: "Embee Software",
     role: "Software Development Intern",
@@ -35,6 +27,14 @@ const EXPERIENCES: Experience[] = [
     description: "Developed a website using React, TypeScript, and Node.js, increasing membership inquiries by 30%. Implemented backend form submissions with Node.js and Express.js for event promotions and enrollments, reducing manual processing time by 40% and enhancing system efficiency.",
     imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
     githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club"
+  },
+  {
+    id: 4,
+    company: "Disability Services - University of Massachusetts Amherst",
+    role: "Document Conversion Assistant",
+    description: "Assisting students with visual disability by providing them with accessible LaTeX notes, ensuring educational content accessibility through advanced document formatting and conversion techniques.",
+    imageUrl: "https://images.unsplash.com/photo-1532619187608-e5375cab36aa",
+    githubUrl: null
   }
 ];
 
