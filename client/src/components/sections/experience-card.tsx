@@ -74,10 +74,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               <h3 className="text-2xl font-semibold">Role Overview</h3>
               <div className="prose prose-lg max-w-none">
                 <p>{experience.description}</p>
-                <p className="text-muted-foreground">
-                  Detailed explanation of the role, team structure, and primary responsibilities.
-                  Include information about the company's mission and how your role contributed to it.
-                </p>
+                <p className="text-muted-foreground">{experience.description}</p>
               </div>
             </section>
 

@@ -66,11 +66,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <h3 className="text-2xl font-semibold">Project Overview</h3>
               <div className="prose prose-lg prose-blue max-w-none">
                 <p>{project.description}</p>
-                <p className="text-muted-foreground">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                <p className="text-muted-foreground">{project.description}</p>
               </div>
             </section>
 
