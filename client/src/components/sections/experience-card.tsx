@@ -22,7 +22,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
         transition={{ delay: index * 0.1 }}
       >
         <Card 
-          className="cursor-pointer transition-transform hover:scale-[1.02]"
+          className="cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
           <CardHeader className="flex flex-row items-center gap-4">

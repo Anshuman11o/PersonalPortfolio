@@ -22,7 +22,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         transition={{ delay: index * 0.1 }}
       >
         <Card 
-          className="overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
+          className="overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
           <img
