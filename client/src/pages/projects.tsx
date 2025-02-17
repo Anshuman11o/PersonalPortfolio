@@ -9,7 +9,7 @@ const PROJECTS: Project[] = [
     title: "WhatsApp Summarizer AI Agent",
     description: "Built an AI agent to generate insightful summaries from diverse media inputs, including PDFs, images, audio, videos, Excel, Word, and PPTs, reducing user's time in content comprehension by 10x. Designed with Python, Django, PyTorch to extract data, OpenAI API to analyze content and prepare format-specific summaries and Twilio API for seamless delivery to users.",
     githubUrl: "https://github.com/Anshuman11o/whatsapp-summarizer-AI-agent",
-    imageUrl: "/image_1739758000906.png"
+    imageUrl: "/image_1739758212584.png"
   },
   {
     id: 2,
