@@ -29,7 +29,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
             <img
               src={experience.imageUrl}
               alt={experience.company}
-              className="w-12 h-12 rounded-full object-cover"
+              className="w-16 h-16 object-contain" 
             />
             <div>
               <CardTitle>{experience.role}</CardTitle>
@@ -60,7 +60,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 <img
                   src={experience.imageUrl}
                   alt={experience.company}
-                  className="w-24 h-24 rounded-lg object-cover border border-accent-gold/20"
+                  className="w-32 h-32 object-contain p-2" 
                 />
                 <div>
                   <h3 className="text-2xl font-semibold">{experience.company}</h3>
