@@ -9,7 +9,7 @@ const EXPERIENCES: Experience[] = [
     company: "Embee Software",
     role: "Software Development Intern",
     description: "Developed an AI agent that processes news content, generating summaries and answering user questions, reducing the time spent reviewing company news by 10x for a client. Built a Python application using Pandas to extract and convert employee work hour data from PDF logs into standardized CSV files, enhancing payroll department efficiency by 20x.",
-    imageUrl: "https://images.unsplash.com/photo-1661956602116-aa6865609028",
+    imageUrl: "https://raw.githubusercontent.com/Anshuman11o/portfolio-website/main/client/public/embee-logo.png",
     githubUrl: null
   },
   {
