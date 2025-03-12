@@ -132,7 +132,32 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
-              {project.title === "Movie Recommender System" ? (
+              {project.title === "Stock Data Visualizer" ? (
+                <div className="space-y-6">
+                  <div 
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/stock-visualizer.png", e)}
+                  >
+                    <img 
+                      src="/stock-visualizer.png" 
+                      alt="Stock Data Interface"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                    <video 
+                      controls
+                      preload="metadata"
+                      className="w-full h-full"
+                      poster="/stock-visualizer.png"
+                    >
+                      <source src="/videos/stock-demo.mp4" type="video/mp4" />
+                      <track kind="captions" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              ) : project.title === "Movie Recommender System" ? (
                 <div className="grid grid-cols-3 gap-4">
                   <div 
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
@@ -161,19 +186,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <img 
                       src="/movie-recommender-3.png" 
                       alt="Movie Recommendations View - Popular Movies"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              ) : project.title === "Stock Data Visualizer" ? (
-                <div className="space-y-6">
-                  <div 
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/stock-visualizer.png", e)}
-                  >
-                    <img 
-                      src="/stock-visualizer.png" 
-                      alt="Stock Data Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
