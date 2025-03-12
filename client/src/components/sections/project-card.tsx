@@ -13,6 +13,12 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [viewingImage, setViewingImage] = useState<string | null>(null);
+
+  const handleImageClick = (imageSrc: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent project card modal from opening
+    setViewingImage(imageSrc);
+  };
 
   return (
     <>
@@ -42,6 +48,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </Card>
       </motion.div>
 
+      {/* Project Details Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
@@ -52,15 +59,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {/* Main Project Image */}
-            <div className="relative h-[400px] overflow-hidden rounded-lg border border-accent-gold/20">
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
             {/* Project Overview */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
@@ -107,20 +105,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <li>Custom trading metrics and indicators</li>
                   </>
                 )}
-                {project.title === "Scrap Calculator Application" && (
-                  <>
-                    <li>Dimension input handling for metal sheets</li>
-                    <li>Production optimization algorithms</li>
-                    <li>Comprehensive error handling system</li>
-                  </>
-                )}
-                {project.title === "Cooking Inventory Management System" && (
-                  <>
-                    <li>User authentication and role management</li>
-                    <li>Real-time inventory tracking</li>
-                    <li>Automated calculations and reporting</li>
-                  </>
-                )}
               </ul>
             </section>
 
@@ -129,14 +113,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               {project.title === "Movie Recommender System" ? (
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                  <div 
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/movie-recommender-1.png", e)}
+                  >
                     <img 
                       src="/movie-recommender-1.png" 
                       alt="Movie Recommender Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                  <div 
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/movie-recommender-2.png", e)}
+                  >
                     <img 
                       src="/movie-recommender-2.png" 
                       alt="Movie Recommendations View"
@@ -156,7 +146,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               )}
             </section>
 
-
             {/* Technical Details */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
@@ -170,12 +159,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   )}
                   {project.title === "Stock Data Visualizer" && (
                     "Developed using JavaScript and Chart.js for visualization, with Alpha Vantage API integration for real-time data. Implemented WebSocket connections for live updates and custom algorithms for trend analysis."
-                  )}
-                  {project.title === "Scrap Calculator Application" && (
-                    "Built using Python's Tkinter for GUI, incorporating custom algorithms for metal sheet optimization. Implemented SQLite database for data persistence and report generation capabilities."
-                  )}
-                  {project.title === "Cooking Inventory Management System" && (
-                    "Developed with Python Tkinter and SQLite3, featuring a layered architecture for separation of concerns. Implemented secure user authentication and real-time database operations."
                   )}
                 </p>
               </div>
@@ -195,6 +178,27 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </a>
               </Button>
             </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+
+      {/* Image Viewer Dialog */}
+      <Dialog open={!!viewingImage} onOpenChange={() => setViewingImage(null)}>
+        <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 border-2 border-accent-gold/20">
+          <div className="relative w-full h-full">
+            {viewingImage && (
+              <img
+                src={viewingImage}
+                alt="Project Screenshot"
+                className="w-full h-full object-contain"
+              />
+            )}
+            <button
+              onClick={() => setViewingImage(null)}
+              className="absolute top-4 right-4 p-2 rounded-full bg-background/80 hover:bg-background text-foreground"
+            >
+              ✕
+            </button>
           </div>
         </DialogContent>
       </Dialog>
