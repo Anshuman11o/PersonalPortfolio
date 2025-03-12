@@ -65,8 +65,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
               <div className="prose prose-lg prose-blue max-w-none">
-                <p>{project.description}</p>
-                <p className="text-muted-foreground">{project.description}</p>
+                {project.title === "Movie Recommender System" ? (
+                  <>
+                    <p>
+                      Developed a content-based movie recommender system using cosine similarity and the TMDB API in Python. The project involved processing movie datasets using Jupyter Notebook, where fields were formatted, unwanted attributes were discarded, and relevant features such as actors, directors, genres, and release dates were combined into a unified tags field. A cosine similarity index generator was implemented to recommend movies based on these tags.
+                    </p>
+                    <p className="text-muted-foreground">
+                      Additional filtering functions were created to refine recommendations based on vote count and popularity, followed by rigorous testing. The frontend was built using Streamlit, which integrated functionalities from Jupyter files, and movie posters were fetched dynamically using the TMDB API. Version control was managed with Git, and the final application was deployed on Heroku for web accessibility.
+                    </p>
+                  </>
+                ) : (
+                  <p>{project.description}</p>
+                )}
               </div>
             </section>
 
@@ -74,18 +84,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                {project.title === "Movie Recommender System" && (
+                  <>
+                    <li>Content-based filtering with cosine similarity</li>
+                    <li>Top 5 similar movie suggestions</li>
+                    <li>Dynamic movie poster fetching</li>
+                    <li>Popular and highly-rated movie recommendations</li>
+                    <li>Advanced filtering based on vote count and popularity</li>
+                  </>
+                )}
                 {project.title === "WhatsApp Summarizer AI Agent" && (
                   <>
                     <li>Multi-format content processing (PDF, images, audio, videos, Excel, Word, PPTs)</li>
                     <li>Real-time summarization through WhatsApp interface</li>
                     <li>Context-aware Q&A capabilities</li>
-                  </>
-                )}
-                {project.title === "Movie Recommender System" && (
-                  <>
-                    <li>Content-based filtering with cosine similarity</li>
-                    <li>Top 5 similar movie suggestions</li>
-                    <li>Popular and highly-rated movie recommendations</li>
                   </>
                 )}
                 {project.title === "Stock Data Visualizer" && (
@@ -115,35 +127,46 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {/* Project Gallery */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {/* Placeholder for additional project images */}
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                  <p className="text-muted-foreground">Additional Image 1</p>
+              {project.title === "Movie Recommender System" ? (
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                    <img 
+                      src="/movie-recommender-1.png" 
+                      alt="Movie Recommender Interface"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                    <img 
+                      src="/movie-recommender-2.png" 
+                      alt="Movie Recommendations View"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                  <p className="text-muted-foreground">Additional Image 2</p>
+              ) : (
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
+                    <p className="text-muted-foreground">Additional Image 1</p>
+                  </div>
+                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
+                    <p className="text-muted-foreground">Additional Image 2</p>
+                  </div>
                 </div>
-              </div>
+              )}
             </section>
 
-            {/* Project Video */}
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Demo Video</h3>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                <p className="text-muted-foreground">Project Demo Video Placeholder</p>
-              </div>
-            </section>
 
             {/* Technical Details */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
                 <p className="text-muted-foreground">
+                  {project.title === "Movie Recommender System" && (
+                    "Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration for retrieving data sets and movie posters. Implemented vectorization and cosine similarity algorithms for movie matching. Used heroku and git for deployment."
+                  )}
                   {project.title === "WhatsApp Summarizer AI Agent" && (
                     "Implemented using Python and Django for backend processing, PyTorch for data extraction, OpenAI API for content analysis, and Twilio API for WhatsApp integration. Utilized advanced NLP techniques for accurate summarization."
-                  )}
-                  {project.title === "Movie Recommender System" && (
-                    "Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration. Implemented vectorization and cosine similarity algorithms for movie matching."
                   )}
                   {project.title === "Stock Data Visualizer" && (
                     "Developed using JavaScript and Chart.js for visualization, with Alpha Vantage API integration for real-time data. Implemented WebSocket connections for live updates and custom algorithms for trend analysis."
