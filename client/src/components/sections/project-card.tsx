@@ -112,7 +112,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               {project.title === "Movie Recommender System" ? (
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   <div 
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                     onClick={(e) => handleImageClick("/movie-recommender-1.png", e)}
@@ -130,6 +130,16 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <img 
                       src="/movie-recommender-2.png" 
                       alt="Movie Recommendations View"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div 
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/movie-recommender-3.png", e)}
+                  >
+                    <img 
+                      src="/movie-recommender-3.png" 
+                      alt="Movie Recommendations View - Popular Movies"
                       className="w-full h-full object-cover"
                     />
                   </div>
