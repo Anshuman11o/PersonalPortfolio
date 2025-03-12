@@ -84,6 +84,15 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       Additional filtering functions were created to refine recommendations based on vote count and popularity, followed by rigorous testing. The frontend was built using Streamlit, which integrated functionalities from Jupyter files, and movie posters were fetched dynamically using the TMDB API. Version control was managed with Git, and the final application was deployed on Heroku for web accessibility.
                     </p>
                   </>
+                ) : project.title === "Stock Data Visualizer" ? (
+                  <>
+                    <p>
+                      Developed a real-time stock data visualization tool for NASDAQ 100, leveraging JavaScript and the Alpha Vantage API to fetch live stock market data. The retrieved data was processed and dynamically visualized using Chart.js, creating interactive stock price charts.
+                    </p>
+                    <p className="text-muted-foreground">
+                      In addition to charts, data tables were implemented to display key stock data points, along with a metrics table that computed and highlighted important financial insights. The frontend was designed using HTML and CSS, ensuring a clean and responsive user experience.
+                    </p>
+                  </>
                 ) : (
                   <p>{project.description}</p>
                 )}
@@ -102,18 +111,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <li>Advanced filtering based on vote count and popularity</li>
                   </>
                 )}
+                {project.title === "Stock Data Visualizer" && (
+                  <>
+                    <li>Real-time NASDAQ 100 stock price tracking</li>
+                    <li>Dynamic graph visualization with Chart.js</li>
+                    <li>Interactive data tables for key metrics</li>
+                    <li>Custom financial indicators and analysis</li>
+                    <li>Responsive and user-friendly interface</li>
+                  </>
+                )}
                 {project.title === "WhatsApp Summarizer AI Agent" && (
                   <>
                     <li>Multi-format content processing (PDF, images, audio, videos, Excel, Word, PPTs)</li>
                     <li>Real-time summarization through WhatsApp interface</li>
                     <li>Context-aware Q&A capabilities</li>
-                  </>
-                )}
-                {project.title === "Stock Data Visualizer" && (
-                  <>
-                    <li>Real-time NASDAQ 100 stock price tracking</li>
-                    <li>Dynamic graph visualization</li>
-                    <li>Custom trading metrics and indicators</li>
                   </>
                 )}
               </ul>
@@ -150,6 +161,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <img 
                       src="/movie-recommender-3.png" 
                       alt="Movie Recommendations View - Popular Movies"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ) : project.title === "Stock Data Visualizer" ? (
+                <div className="space-y-6">
+                  <div 
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/stock-visualizer.png", e)}
+                  >
+                    <img 
+                      src="/stock-visualizer.png" 
+                      alt="Stock Data Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
