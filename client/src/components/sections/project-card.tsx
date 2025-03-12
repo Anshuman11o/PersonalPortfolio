@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { FaGithub } from "react-icons/fa";
+import { ExternalLink } from "lucide-react";
 import { useState } from "react";
 import type { Project } from "@shared/schema";
 
@@ -16,7 +17,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [viewingImage, setViewingImage] = useState<string | null>(null);
 
   const handleImageClick = (imageSrc: string, e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent project card modal from opening
+    e.stopPropagation();
     setViewingImage(imageSrc);
   };
 
@@ -48,18 +49,29 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </Card>
       </motion.div>
 
-      {/* Project Details Dialog */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
-            <DialogTitle className="text-3xl font-bold">{project.title}</DialogTitle>
+            <DialogTitle className="text-3xl font-bold flex items-center gap-4">
+              {project.title}
+              {project.title === "Movie Recommender System" && (
+                <a
+                  href="https://movie-recommender-system-11o-7fec3d4e884a.herokuapp.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-lg font-normal text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <span>Live Demo</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              )}
+            </DialogTitle>
             <DialogDescription className="text-lg text-muted-foreground">
               A comprehensive overview of this project
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {/* Project Overview */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
               <div className="prose prose-lg prose-blue max-w-none">
@@ -78,7 +90,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
             </section>
 
-            {/* Key Features */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -108,7 +119,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               </ul>
             </section>
 
-            {/* Project Gallery */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               {project.title === "Movie Recommender System" ? (
@@ -156,7 +166,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               )}
             </section>
 
-            {/* Technical Details */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
@@ -174,7 +183,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               </div>
             </section>
 
-            {/* Action Buttons */}
             <div className="flex justify-end gap-4 pt-4">
               <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
                 <a
@@ -192,7 +200,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </DialogContent>
       </Dialog>
 
-      {/* Image Viewer Dialog */}
       <Dialog open={!!viewingImage} onOpenChange={() => setViewingImage(null)}>
         <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 border-2 border-accent-gold/20">
           <div className="relative w-full h-full">
