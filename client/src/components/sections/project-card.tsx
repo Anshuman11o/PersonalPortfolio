@@ -52,17 +52,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
-            <DialogTitle className="text-3xl font-bold flex items-center gap-4">
+            <DialogTitle className="text-3xl font-bold flex items-center gap-6">
               {project.title}
               {project.title === "Movie Recommender System" && (
                 <a
                   href="https://movie-recommender-system-11o-7fec3d4e884a.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-lg font-normal text-muted-foreground hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-2 text-xl font-semibold px-3 py-1 rounded-md bg-accent-gold/10 text-accent-gold hover:bg-accent-gold/20 transition-all"
                 >
                   <span>Live Demo</span>
-                  <ExternalLink className="h-4 w-4" />
+                  <ExternalLink className="h-5 w-5" />
                 </a>
               )}
             </DialogTitle>
