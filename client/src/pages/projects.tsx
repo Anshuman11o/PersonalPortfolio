@@ -1,4 +1,3 @@
-
 import { useQuery } from "@tanstack/react-query";
 import ProjectCard from "@/components/sections/project-card";
 import type { Project } from "@shared/schema";
@@ -27,13 +26,6 @@ const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: "Scrap Calculator Application",
-    description: "Developed a metal scrap calculator for Ferrum water purifier production using Python's Tkinter. The application optimizes metal sheet usage calculations, reducing accounting time by 90 minutes per week. Features include dimension input handling, production optimization algorithms, and a user-friendly GUI with comprehensive error handling.",
-    githubUrl: "https://github.com/Anshuman11o/Scrap-Calculator-Application",
-    imageUrl: "https://images.unsplash.com/photo-1605792657660-596af9009e82"
-  },
-  {
-    id: 5,
     title: "Cooking Inventory Management System",
     description: "Developed an inventory management system for freelance chefs using Python's Tkinter and SQLite3. Features include user authentication, real-time inventory tracking, order management, and financial reporting. The system streamlines operations with automated calculations and comprehensive documentation.",
     githubUrl: "https://github.com/Anshuman11o/Cooking-Inventory-Management-System",

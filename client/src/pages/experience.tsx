@@ -26,6 +26,14 @@ const EXPERIENCES: Experience[] = [
     description: "Designed and developed a modern, responsive website for the UMass Boxing Club using HTML, CSS, and JavaScript. Created an engaging platform that showcases club activities, training schedules, and member achievements. Implemented user-friendly navigation and mobile-responsive design.",
     imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
     githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club"
+  },
+  {
+    id: 4,
+    company: "Ferrum",
+    role: "Software Development Intern",
+    description: "Worked at Ferrum as an Intern for 2 weeks. Developed an app for the company using python. Learnt about the water purifier manufacturing process. Understood how a water purifier business is managed.",
+    imageUrl: "./attached_assets/image_1742064729862.png",
+    githubUrl: "https://github.com/Anshuman11o/Scrap-Calculator-Application"
   }
 ];
 
