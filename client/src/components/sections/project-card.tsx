@@ -116,6 +116,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       In addition to charts, data tables were implemented to display key stock data points, along with a metrics table that computed and highlighted important financial insights. The frontend was designed using HTML and CSS, ensuring a clean and responsive user experience.
                     </p>
                   </>
+                ) : project.title === "WhatsApp Summarizer AI Agent" ? (
+                  <>
+                    <p>
+                      Built a WhatsApp Summarizer AI Agent using Python, Django, PyTorch, OpenAI API, and Twilio API. This agent processes multi-format content (PDF, images, audio, videos, Excel, Word, PPTs) and provides real-time summarization through the WhatsApp interface. It also features context-aware Q&A capabilities.
+                    </p>
+                  </>
+                ) : project.title === "Cooking Inventory Management System" ? (
+                  <>
+                    <p>
+                      Developed an inventory management system for freelance chefs using Python's Tkinter and SQLite3. The system streamlines inventory tracking, order management, and financial reporting while integrating user authentication for secure access. By automating calculations and optimizing workflows, the solution enhances operational efficiency, enabling timely deliveries and increased order capacity.
+                    </p>
+                  </>
                 ) : (
                   <p>{project.description}</p>
                 )}
@@ -151,6 +163,17 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <li>Context-aware Q&A capabilities</li>
                   </>
                 )}
+                {project.title === "Cooking Inventory Management System" && (
+                  <>
+                    <li>User Authentication: Secure login system to manage user access</li>
+                    <li>Real-Time Inventory Tracking: Enables chefs to monitor stock levels and update them dynamically</li>
+                    <li>Order Management: Tracks incoming and outgoing orders efficiently</li>
+                    <li>Financial Reporting: Automates cost and revenue calculations for streamlined bookkeeping</li>
+                    <li>Personalized User Experience: Custom-built features based on user feedback for improved usability</li>
+                    <li>Error Handling & Validation: Ensures data integrity and prevents invalid inputs</li>
+                    <li>Comprehensive Documentation: Delivered with detailed instructions for ease of use and maintenance</li>
+                  </>
+                )}
               </ul>
             </section>
 
@@ -159,7 +182,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               {project.title === "Movie Recommender System" && (
                 <div className="grid grid-cols-2 gap-4">
-                  <div 
+                  <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                     onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.23.43 PM.png", e)}
                   >
@@ -169,7 +192,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div 
+                  <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                     onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.24.33 PM.png", e)}
                   >
@@ -179,7 +202,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div 
+                  <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
                     onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.34.29 PM.png", e)}
                   >
@@ -215,23 +238,93 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   </div>
                 </div>
               )}
+              {project.title === "Cooking Inventory Management System" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077066293.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077066293.png"
+                      alt="Login Interface"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077061579.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077061579.png"
+                      alt="Inventory Management"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077080642.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077080642.png"
+                      alt="Order Management"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077085742.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077085742.png"
+                      alt="Menu Management"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077096674.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077096674.png"
+                      alt="Financial Reports"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/image_1742077108103.png", e)}
+                  >
+                    <img
+                      src="attached_assets/image_1742077108103.png"
+                      alt="Error Handling"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
             </section>
 
             {/* Technical Details Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
-                <p>
-                  {project.title === "Movie Recommender System" && (
-                    "Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration for retrieving data sets and movie posters. Implemented vectorization and cosine similarity algorithms for movie matching. Used heroku and git for deployment."
-                  )}
-                  {project.title === "WhatsApp Summarizer AI Agent" && (
-                    "Implemented using Python and Django for backend processing, PyTorch for data extraction, OpenAI API for content analysis, and Twilio API for WhatsApp integration. Utilized advanced NLP techniques for accurate summarization."
-                  )}
-                  {project.title === "Stock Data Visualizer" && (
-                    "Developed using JavaScript and Chart.js for visualization, with Alpha Vantage API integration for real-time data. Implemented WebSocket connections for live updates and custom algorithms for trend analysis."
-                  )}
-                </p>
+                {project.title === "Movie Recommender System" ? (
+                  <p>
+                    Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration for retrieving data sets and movie posters. Implemented vectorization and cosine similarity algorithms for movie matching. Used heroku and git for deployment.
+                  </p>
+                ) : project.title === "WhatsApp Summarizer AI Agent" ? (
+                  <p>
+                    Implemented using Python and Django for backend processing, PyTorch for data extraction, OpenAI API for content analysis, and Twilio API for WhatsApp integration. Utilized advanced NLP techniques for accurate summarization.
+                  </p>
+                ) : project.title === "Stock Data Visualizer" ? (
+                  <p>
+                    Developed using JavaScript and Chart.js for visualization, with Alpha Vantage API integration for real-time data. Implemented WebSocket connections for live updates and custom algorithms for trend analysis.
+                  </p>
+                ) : project.title === "Cooking Inventory Management System" ? (
+                  <p>
+                    Tech Stack: Python (Tkinter for GUI), SQLite3 for database management. Implemented CRUD operations, data optimization using derived attributes, joins, and third normal form (3NF) normalization for efficiency. Integrated the frontend with the database for seamless interaction, utilized global variables to maintain consistent data flow, and improved the system based on feedback from real users.
+                  </p>
+                ) : null}
               </div>
             </section>
           </div>
