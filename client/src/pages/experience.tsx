@@ -16,7 +16,7 @@ const EXPERIENCES: Experience[] = [
     company: "UMass Robotics Club",
     role: "Software Developer",
     description: "Contributing to the Unity Telepresence project, focusing on inverse kinematics and motion planning for humanoid robots. Working on system design and modeling to enhance robot movement capabilities for the Mass Robotics competition. Implementing advanced robotics algorithms and real-time control systems.",
-    imageUrl: "https://images.unsplash.com/photo-1561557944-6e7860d1a7eb",
+    imageUrl: "./attached_assets/69ce572d-3728-4880-a6d0-0a79831be980.png",
     githubUrl: "https://github.com/UMass-Robotics-Club/Unity-Telepresence"
   },
   {
