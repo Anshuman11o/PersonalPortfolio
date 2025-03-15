@@ -31,10 +31,22 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               alt={experience.company}
               className="w-16 h-16 object-contain" 
             />
-            <div>
+            <div className="flex-grow">
               <CardTitle>{experience.role}</CardTitle>
               <p className="text-sm">{experience.company}</p>
             </div>
+            {experience.githubUrl && (
+              <Button variant="ghost" size="sm" asChild className="text-accent-gold hover:text-accent-gold/80">
+                <a
+                  href={experience.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaGithub className="h-5 w-5" />
+                </a>
+              </Button>
+            )}
           </CardHeader>
           <CardContent>
             <p className="line-clamp-2">{experience.description}</p>
