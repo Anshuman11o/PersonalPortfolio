@@ -22,7 +22,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
         transition={{ delay: index * 0.1 }}
       >
         <Card 
-          className="h-[300px] cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
+          className="cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
           <CardHeader className="flex flex-row items-center gap-4">
@@ -71,7 +71,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Role Overview</h3>
               <div className="prose prose-lg max-w-none">
-                <p>{experience.description}</p>
                 <p>{experience.description}</p>
               </div>
             </section>

@@ -137,20 +137,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   <div className="grid grid-cols-2 gap-4">
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("images/stock-data-graph.png", e)}
+                      onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
                     >
                       <img 
-                        src="images/stock-data-graph.png" 
+                        src="/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
                         alt="Stock Data Graph View"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("images/stock-data-table.png", e)}
+                      onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
                     >
                       <img 
-                        src="images/stock-data-table.png" 
+                        src="/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
                         alt="Stock Data Table View"
                         className="w-full h-full object-cover"
                       />
