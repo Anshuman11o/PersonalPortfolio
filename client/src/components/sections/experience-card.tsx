@@ -99,11 +99,10 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <li>Implemented full-stack web solutions</li>
                   </>
                 )}
-                {experience.company === "Disability Services - University of Massachusetts Amherst" && (
+                {experience.company === "Ferrum" && (
                   <>
-                    <li>Create accessible LaTeX documents for visually impaired students</li>
-                    <li>FERPA certified for handling sensitive student information</li>
-                    <li>Utilize Microsoft Office and Overleaf for document conversion</li>
+                    <li>Developed a Python Tkinter application which calculates the waste metal scrape produced in the company's production line</li>
+                    <li>Helped the company to improve their waste tracking from manual to automatic</li>
                   </>
                 )}
               </ul>
@@ -122,8 +121,8 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   {experience.company === "UMass Boxing Club" && (
                     "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
                   )}
-                  {experience.company === "Disability Services - University of Massachusetts Amherst" && (
-                    "LaTeX, Microsoft Word, Microsoft OneDrive, Overleaf, Document Formatting, FERPA Compliance"
+                  {experience.company === "Ferrum" && (
+                    "Python, Tkinter, Geometry"
                   )}
                 </p>
               </div>
