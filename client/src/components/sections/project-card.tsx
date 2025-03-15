@@ -28,7 +28,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.1 }}
       >
-        <Card 
+        <Card
           className="h-[400px] overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
@@ -61,19 +61,32 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
-            <DialogTitle className="text-3xl font-bold flex items-center gap-6">
-              {project.title}
-              {project.title === "Movie Recommender System" && (
-                <a
-                  href="https://movie-recommender-system-11o-7fec3d4e884a.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xl font-semibold px-3 py-1 rounded-md bg-accent-gold/10 text-accent-gold hover:bg-accent-gold/20 transition-all"
-                >
-                  <span>Live Demo</span>
-                  <ExternalLink className="h-5 w-5" />
-                </a>
-              )}
+            <DialogTitle className="text-3xl font-bold flex items-center justify-between">
+              <span>{project.title}</span>
+              <div className="flex items-center gap-4">
+                {project.title === "Movie Recommender System" && (
+                  <a
+                    href="https://movie-recommender-system-11o-7fec3d4e884a.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xl font-semibold px-3 py-1 rounded-md bg-accent-gold/10 text-accent-gold hover:bg-accent-gold/20 transition-all"
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink className="h-5 w-5" />
+                  </a>
+                )}
+                <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                  >
+                    <FaGithub className="h-4 w-4" />
+                    View on GitHub
+                  </a>
+                </Button>
+              </div>
             </DialogTitle>
             <DialogDescription className="text-lg">
               A comprehensive overview of this project
@@ -144,21 +157,21 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               {project.title === "Stock Data Visualizer" ? (
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
-                    <div 
+                    <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                       onClick={(e) => handleImageClick("./attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
                     >
-                      <img 
+                      <img
                         src="./attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
                         alt="Stock Data Graph View"
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div 
+                    <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                       onClick={(e) => handleImageClick("./attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
                     >
-                      <img 
+                      <img
                         src="./attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
                         alt="Stock Data Table View"
                         className="w-full h-full object-cover"
@@ -185,20 +198,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </p>
               </div>
             </section>
-
-            <div className="flex justify-end gap-4 pt-4">
-              <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  <FaGithub className="h-4 w-4" />
-                  View on GitHub
-                </a>
-              </Button>
-            </div>
           </div>
         </DialogContent>
       </Dialog>
