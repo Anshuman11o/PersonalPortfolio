@@ -161,30 +161,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div 
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-12 at 1.23.43 PM.png", e)}
+                    onClick={(e) => handleImageClick("/images/projects/movie-recommender-1.png", e)}
                   >
                     <img
-                      src="/attached_assets/Screenshot 2025-03-12 at 1.23.43 PM.png"
+                      src="/images/projects/movie-recommender-1.png"
                       alt="Movie Recommender Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div 
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-12 at 1.24.33 PM.png", e)}
+                    onClick={(e) => handleImageClick("/images/projects/movie-recommender-2.png", e)}
                   >
                     <img
-                      src="/attached_assets/Screenshot 2025-03-12 at 1.24.33 PM.png"
+                      src="/images/projects/movie-recommender-2.png"
                       alt="Movie Recommendations"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div 
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-12 at 1.34.29 PM.png", e)}
+                    onClick={(e) => handleImageClick("/images/projects/movie-recommender-3.png", e)}
                   >
                     <img
-                      src="/attached_assets/Screenshot 2025-03-12 at 1.34.29 PM.png"
+                      src="/images/projects/movie-recommender-3.png"
                       alt="Movie Recommendations Additional"
                       className="w-full h-full object-cover"
                     />
@@ -195,20 +195,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
+                    onClick={(e) => handleImageClick("/images/projects/stock-visualizer-1.png", e)}
                   >
                     <img
-                      src="/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
+                      src="/images/projects/stock-visualizer-1.png"
                       alt="Stock Data Graph View"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
+                    onClick={(e) => handleImageClick("/images/projects/stock-visualizer-2.png", e)}
                   >
                     <img
-                      src="/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
+                      src="/images/projects/stock-visualizer-2.png"
                       alt="Stock Data Table View"
                       className="w-full h-full object-cover"
                     />
