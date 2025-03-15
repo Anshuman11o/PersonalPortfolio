@@ -22,7 +22,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
         transition={{ delay: index * 0.1 }}
       >
         <Card 
-          className="cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
+          className="h-[300px] cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
           <CardHeader className="flex flex-row items-center gap-4">
@@ -33,11 +33,11 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
             />
             <div>
               <CardTitle>{experience.role}</CardTitle>
-              <p className="text-sm text-muted-foreground">{experience.company}</p>
+              <p className="text-sm">{experience.company}</p>
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground line-clamp-2">{experience.description}</p>
+            <p className="line-clamp-2">{experience.description}</p>
           </CardContent>
         </Card>
       </motion.div>
@@ -48,13 +48,12 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
             <DialogTitle className="text-3xl font-bold">
               {experience.role} at {experience.company}
             </DialogTitle>
-            <DialogDescription className="text-lg text-muted-foreground">
+            <DialogDescription className="text-lg">
               A detailed overview of my role and contributions
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {/* Company Overview */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <div className="flex items-center gap-6">
                 <img
@@ -64,24 +63,22 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 />
                 <div>
                   <h3 className="text-2xl font-semibold">{experience.company}</h3>
-                  <p className="text-muted-foreground">{experience.role}</p>
+                  <p>{experience.role}</p>
                 </div>
               </div>
             </section>
 
-            {/* Role Description */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Role Overview</h3>
               <div className="prose prose-lg max-w-none">
                 <p>{experience.description}</p>
-                <p className="text-muted-foreground">{experience.description}</p>
+                <p>{experience.description}</p>
               </div>
             </section>
 
-            {/* Key Achievements */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Achievements</h3>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+              <ul className="list-disc list-inside space-y-2">
                 {experience.company === "Embee Software" && (
                   <>
                     <li>Reduced news review time by 10x through AI implementation</li>
@@ -113,33 +110,10 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               </ul>
             </section>
 
-            {/* Project Gallery */}
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Project Highlights</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {/* Placeholder for project images */}
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                  <p className="text-muted-foreground">Project Image 1</p>
-                </div>
-                <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                  <p className="text-muted-foreground">Project Image 2</p>
-                </div>
-              </div>
-            </section>
-
-            {/* Demo Video */}
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Project Demonstration</h3>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                <p className="text-muted-foreground">Project Demo Video Placeholder</p>
-              </div>
-            </section>
-
-            {/* Skills & Technologies */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
               <div className="prose prose-lg max-w-none">
-                <p className="text-muted-foreground">
+                <p>
                   {experience.company === "Embee Software" && (
                     "Python, Pandas, AI/ML, Natural Language Processing, PDF Processing, Data Extraction, API Integration"
                   )}
@@ -156,7 +130,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               </div>
             </section>
 
-            {/* Action Buttons */}
             {experience.githubUrl && (
               <div className="flex justify-end gap-4 pt-4">
                 <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">

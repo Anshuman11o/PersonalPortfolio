@@ -29,7 +29,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         transition={{ delay: index * 0.1 }}
       >
         <Card 
-          className="overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
+          className="h-[400px] overflow-hidden cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
           <img
@@ -44,7 +44,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground line-clamp-2">{project.description}</p>
+            <p className="line-clamp-2">{project.description}</p>
           </CardContent>
         </Card>
       </motion.div>
@@ -66,7 +66,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </a>
               )}
             </DialogTitle>
-            <DialogDescription className="text-lg text-muted-foreground">
+            <DialogDescription className="text-lg">
               A comprehensive overview of this project
             </DialogDescription>
           </DialogHeader>
@@ -74,13 +74,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           <div className="space-y-8 mt-6">
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
-              <div className="prose prose-lg prose-blue max-w-none">
+              <div className="prose prose-lg max-w-none">
                 {project.title === "Movie Recommender System" ? (
                   <>
                     <p>
                       Developed a content-based movie recommender system using cosine similarity and the TMDB API in Python. The project involved processing movie datasets using Jupyter Notebook, where fields were formatted, unwanted attributes were discarded, and relevant features such as actors, directors, genres, and release dates were combined into a unified tags field. A cosine similarity index generator was implemented to recommend movies based on these tags.
                     </p>
-                    <p className="text-muted-foreground">
+                    <p>
                       Additional filtering functions were created to refine recommendations based on vote count and popularity, followed by rigorous testing. The frontend was built using Streamlit, which integrated functionalities from Jupyter files, and movie posters were fetched dynamically using the TMDB API. Version control was managed with Git, and the final application was deployed on Heroku for web accessibility.
                     </p>
                   </>
@@ -89,7 +89,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <p>
                       Developed a real-time stock data visualization tool for NASDAQ 100, leveraging JavaScript and the Alpha Vantage API to fetch live stock market data. The retrieved data was processed and dynamically visualized using Chart.js, creating interactive stock price charts.
                     </p>
-                    <p className="text-muted-foreground">
+                    <p>
                       In addition to charts, data tables were implemented to display key stock data points, along with a metrics table that computed and highlighted important financial insights. The frontend was designed using HTML and CSS, ensuring a clean and responsive user experience.
                     </p>
                   </>
@@ -101,7 +101,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+              <ul className="list-disc list-inside space-y-2">
                 {project.title === "Movie Recommender System" && (
                   <>
                     <li>Content-based filtering with cosine similarity</li>
@@ -137,20 +137,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   <div className="grid grid-cols-2 gap-4">
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
+                      onClick={(e) => handleImageClick("images/stock-data-graph.png", e)}
                     >
                       <img 
-                        src="attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
+                        src="images/stock-data-graph.png" 
                         alt="Stock Data Graph View"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
+                      onClick={(e) => handleImageClick("images/stock-data-table.png", e)}
                     >
                       <img 
-                        src="attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
+                        src="images/stock-data-table.png" 
                         alt="Stock Data Table View"
                         className="w-full h-full object-cover"
                       />
@@ -193,10 +193,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
               ) : (
                 <div className="grid grid-cols-2 gap-4">
                   <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                    <p className="text-muted-foreground">Additional Image 1</p>
+                    <p>Additional Image 1</p>
                   </div>
                   <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                    <p className="text-muted-foreground">Additional Image 2</p>
+                    <p>Additional Image 2</p>
                   </div>
                 </div>
               )}
@@ -205,7 +205,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
-                <p className="text-muted-foreground">
+                <p>
                   {project.title === "Movie Recommender System" && (
                     "Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration for retrieving data sets and movie posters. Implemented vectorization and cosine similarity algorithms for movie matching. Used heroku and git for deployment."
                   )}
