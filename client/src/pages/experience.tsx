@@ -32,7 +32,7 @@ const EXPERIENCES: Experience[] = [
     company: "Ferrum",
     role: "Software Development Intern",
     description: "Worked at Ferrum as an Intern for 2 weeks. Developed an app for the company using python. Learnt about the water purifier manufacturing process. Understood how a water purifier business is managed.",
-    imageUrl: "/images/ferrum-logo.png",
+    imageUrl: "./attached_assets/image_1742065610082.png",
     githubUrl: "https://github.com/Anshuman11o/Scrap-Calculator-Application"
   }
 ];
