@@ -38,10 +38,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             className="w-full h-48 object-cover"
           />
           <CardHeader>
-            <CardTitle className="flex items-center justify-between">
-              <span>{project.title}</span>
-              <span className="text-accent-gold">→</span>
-            </CardTitle>
+            <div className="flex items-center justify-between">
+              <CardTitle>{project.title}</CardTitle>
+              <Button variant="ghost" size="sm" asChild className="text-accent-gold hover:text-accent-gold/80">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <FaGithub className="h-5 w-5" />
+                </a>
+              </Button>
+            </div>
           </CardHeader>
           <CardContent>
             <p className="line-clamp-2">{project.description}</p>
