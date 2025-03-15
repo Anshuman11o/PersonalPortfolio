@@ -137,69 +137,27 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   <div className="grid grid-cols-2 gap-4">
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
+                      onClick={(e) => handleImageClick("./attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
                     >
                       <img 
-                        src="/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
+                        src="./attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
                         alt="Stock Data Graph View"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div 
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
+                      onClick={(e) => handleImageClick("./attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
                     >
                       <img 
-                        src="/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
+                        src="./attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
                         alt="Stock Data Table View"
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
                 </div>
-              ) : project.title === "Movie Recommender System" ? (
-                <div className="grid grid-cols-3 gap-4">
-                  <div 
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/movie-recommender-1.png", e)}
-                  >
-                    <img 
-                      src="/movie-recommender-1.png" 
-                      alt="Movie Recommender Interface"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/movie-recommender-2.png", e)}
-                  >
-                    <img 
-                      src="/movie-recommender-2.png" 
-                      alt="Movie Recommendations View"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div 
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/movie-recommender-3.png", e)}
-                  >
-                    <img 
-                      src="/movie-recommender-3.png" 
-                      alt="Movie Recommendations View - Popular Movies"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                    <p>Additional Image 1</p>
-                  </div>
-                  <div className="aspect-video bg-muted rounded-lg flex items-center justify-center border border-accent-gold/10">
-                    <p>Additional Image 2</p>
-                  </div>
-                </div>
-              )}
+              ) : null}
             </section>
 
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
@@ -238,6 +196,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
 
       <Dialog open={!!viewingImage} onOpenChange={() => setViewingImage(null)}>
         <DialogContent className="max-w-[90vw] max-h-[90vh] p-0 border-2 border-accent-gold/20">
+          <DialogHeader>
+            <DialogTitle className="sr-only">Project Image Viewer</DialogTitle>
+            <DialogDescription className="sr-only">
+              Enlarged view of project screenshot
+            </DialogDescription>
+          </DialogHeader>
           <div className="relative w-full h-full">
             {viewingImage && (
               <img
