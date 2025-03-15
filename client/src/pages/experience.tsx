@@ -16,7 +16,7 @@ const EXPERIENCES: Experience[] = [
     company: "UMass Robotics Club",
     role: "Software Developer",
     description: "Contributing to the Unity Telepresence project, focusing on inverse kinematics and motion planning for humanoid robots. Working on system design and modeling to enhance robot movement capabilities for the Mass Robotics competition. Implementing advanced robotics algorithms and real-time control systems.",
-    imageUrl: "./attached_assets/69ce572d-3728-4880-a6d0-0a79831be980.png",
+    imageUrl: "/images/umass-robotics.png",
     githubUrl: "https://github.com/UMass-Robotics-Club/Unity-Telepresence"
   },
   {
@@ -32,7 +32,7 @@ const EXPERIENCES: Experience[] = [
     company: "Ferrum",
     role: "Software Development Intern",
     description: "Worked at Ferrum as an Intern for 2 weeks. Developed an app for the company using python. Learnt about the water purifier manufacturing process. Understood how a water purifier business is managed.",
-    imageUrl: "./attached_assets/image_1742065610082.png",
+    imageUrl: "/images/ferrum-logo.png",
     githubUrl: "https://github.com/Anshuman11o/Scrap-Calculator-Application"
   }
 ];
