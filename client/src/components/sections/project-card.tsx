@@ -94,36 +94,35 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {/* Project sections */}
+            {/* Project Overview Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Project Gallery</h3>
-              {project.title === "Stock Data Visualizer" ? (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div
-                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/images/stock-data-graph.png", e)}
-                    >
-                      <img
-                        src="/images/stock-data-graph.png"
-                        alt="Stock Data Graph View"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div
-                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/images/stock-data-table.png", e)}
-                    >
-                      <img
-                        src="/images/stock-data-table.png"
-                        alt="Stock Data Table View"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ) : null}
+              <h3 className="text-2xl font-semibold">Project Overview</h3>
+              <div className="prose prose-lg max-w-none">
+                {project.title === "Movie Recommender System" ? (
+                  <>
+                    <p>
+                      Developed a content-based movie recommender system using cosine similarity and the TMDB API in Python. The project involved processing movie datasets using Jupyter Notebook, where fields were formatted, unwanted attributes were discarded, and relevant features such as actors, directors, genres, and release dates were combined into a unified tags field. A cosine similarity index generator was implemented to recommend movies based on these tags.
+                    </p>
+                    <p>
+                      Additional filtering functions were created to refine recommendations based on vote count and popularity, followed by rigorous testing. The frontend was built using Streamlit, which integrated functionalities from Jupyter files, and movie posters were fetched dynamically using the TMDB API. Version control was managed with Git, and the final application was deployed on Heroku for web accessibility.
+                    </p>
+                  </>
+                ) : project.title === "Stock Data Visualizer" ? (
+                  <>
+                    <p>
+                      Developed a real-time stock data visualization tool for NASDAQ 100, leveraging JavaScript and the Alpha Vantage API to fetch live stock market data. The retrieved data was processed and dynamically visualized using Chart.js, creating interactive stock price charts.
+                    </p>
+                    <p>
+                      In addition to charts, data tables were implemented to display key stock data points, along with a metrics table that computed and highlighted important financial insights. The frontend was designed using HTML and CSS, ensuring a clean and responsive user experience.
+                    </p>
+                  </>
+                ) : (
+                  <p>{project.description}</p>
+                )}
+              </div>
             </section>
+
+            {/* Key Features Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2">
@@ -154,32 +153,55 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 )}
               </ul>
             </section>
+
+            {/* Project Gallery Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Project Overview</h3>
-              <div className="prose prose-lg max-w-none">
-                {project.title === "Movie Recommender System" ? (
-                  <>
-                    <p>
-                      Developed a content-based movie recommender system using cosine similarity and the TMDB API in Python. The project involved processing movie datasets using Jupyter Notebook, where fields were formatted, unwanted attributes were discarded, and relevant features such as actors, directors, genres, and release dates were combined into a unified tags field. A cosine similarity index generator was implemented to recommend movies based on these tags.
-                    </p>
-                    <p>
-                      Additional filtering functions were created to refine recommendations based on vote count and popularity, followed by rigorous testing. The frontend was built using Streamlit, which integrated functionalities from Jupyter files, and movie posters were fetched dynamically using the TMDB API. Version control was managed with Git, and the final application was deployed on Heroku for web accessibility.
-                    </p>
-                  </>
-                ) : project.title === "Stock Data Visualizer" ? (
-                  <>
-                    <p>
-                      Developed a real-time stock data visualization tool for NASDAQ 100, leveraging JavaScript and the Alpha Vantage API to fetch live stock market data. The retrieved data was processed and dynamically visualized using Chart.js, creating interactive stock price charts.
-                    </p>
-                    <p>
-                      In addition to charts, data tables were implemented to display key stock data points, along with a metrics table that computed and highlighted important financial insights. The frontend was designed using HTML and CSS, ensuring a clean and responsive user experience.
-                    </p>
-                  </>
-                ) : (
-                  <p>{project.description}</p>
-                )}
-              </div>
+              <h3 className="text-2xl font-semibold">Project Gallery</h3>
+              {project.title === "Movie Recommender System" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                    <img
+                      src="/images/movie-recommender-1.png"
+                      alt="Movie Recommender Interface"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10">
+                    <img
+                      src="/images/movie-recommender-2.png"
+                      alt="Movie Recommendations"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+              {project.title === "Stock Data Visualizer" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
+                  >
+                    <img
+                      src="/attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
+                      alt="Stock Data Graph View"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
+                  >
+                    <img
+                      src="/attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
+                      alt="Stock Data Table View"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
             </section>
+
+            {/* Technical Details Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
