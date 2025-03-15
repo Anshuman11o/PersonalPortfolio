@@ -26,11 +26,13 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           onClick={() => setIsOpen(true)}
         >
           <CardHeader className="flex flex-row items-center gap-4">
-            <img
-              src={experience.imageUrl}
-              alt={experience.company}
-              className="w-16 h-16 object-contain" 
-            />
+            <div className="w-16 h-16 flex items-center justify-center">
+              <img
+                src={experience.imageUrl}
+                alt={experience.company}
+                className="max-w-full max-h-full object-contain" 
+              />
+            </div>
             <div className="flex-grow">
               <CardTitle>{experience.role}</CardTitle>
               <p className="text-sm">{experience.company}</p>
@@ -81,11 +83,13 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           <div className="space-y-8 mt-6">
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <div className="flex items-center gap-6">
-                <img
-                  src={experience.imageUrl}
-                  alt={experience.company}
-                  className="w-32 h-32 object-contain p-2" 
-                />
+                <div className="w-32 h-32 flex items-center justify-center">
+                  <img
+                    src={experience.imageUrl}
+                    alt={experience.company}
+                    className="max-w-full max-h-full object-contain" 
+                  />
+                </div>
                 <div>
                   <h3 className="text-2xl font-semibold">{experience.company}</h3>
                   <p>{experience.role}</p>
