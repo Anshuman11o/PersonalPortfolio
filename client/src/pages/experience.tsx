@@ -24,7 +24,7 @@ const EXPERIENCES: Experience[] = [
     company: "UMass Boxing Club",
     role: "Web Developer",
     description: "Designed and developed a modern, responsive website for the UMass Boxing Club using HTML, CSS, and JavaScript. Created an engaging platform that showcases club activities, training schedules, and member achievements. Implemented user-friendly navigation and mobile-responsive design.",
-    imageUrl: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed",
+    imageUrl: "/images/boxing-club-logo.png",
     githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club"
   },
   {
