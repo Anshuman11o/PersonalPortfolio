@@ -1,0 +1,28 @@
+Role Overview
+As a Software Development Intern at Embee Software, I worked on two automation-driven projects:
+
+PDF/CSV Validator – Developed a Python-based tool to automate payroll data extraction and conversion, reducing manual effort and securing a company-wide deployment.
+AI Agent/Bot Summarizer – Designed an AI-powered system to automate news summarization for press meetings using Azure Cognitive Services and OpenAI APIs, streamlining content retrieval across multiple formats.
+Key Achievements
+PDF/CSV Validator:
+
+Engineered a Python application to extract employee work-hour data from scanned payroll PDFs and convert them into structured CSV files.
+Optimized payroll processing efficiency by 20x, leading to a company-wide contract adoption.
+Implemented a Tkinter-based UI and leveraged PDFPlumber and Pandas for data extraction and transformation.
+AI Agent/Bot Summarizer:
+
+Developed an AI agent that automates news summarization, reducing manual review time by 10x.
+Implemented a web scraper using BeautifulSoup to fetch online news articles.
+Processed multimedia content (audio, video, and images) using Azure Cognitive Services for speech-to-text and OCR functionalities.
+Indexed retrieved data in Azure Blob Storage and enabled keyword-based retrieval via Azure Search Index.
+Integrated OpenAI’s language models with prompt engineering techniques for accurate, topic-based and query-based summaries.
+Skills & Technologies
+Programming & Data Processing: Python (Pandas, Tkinter, JSON, XML, CSV), BeautifulSoup
+Cloud & AI Services: Azure Cognitive Services, Azure Blob Storage, Azure Search Index, OpenAI APIs
+Automation & UI Development: Web scraping, OCR, Speech-to-Text, Prompt Engineering
+Soft Skills & Work Environment Experience
+Collaboration & Teamwork: Worked closely with managers and stakeholders to align project goals with business needs.
+Communication: Presented technical concepts to non-technical users, ensuring clarity and ease of adoption.
+Problem-Solving: Designed scalable solutions to automate manual workflows, improving efficiency.
+Documentation: Maintained clear and structured documentation for processes, ensuring smooth handover and future scalability.
+Adaptability: Iterated on solutions based on user feedback, refining the tools for real-world deployment.

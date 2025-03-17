@@ -31,7 +31,7 @@ const NavLinks = () => (
 );
 
 const SocialLinks = () => (
-  <div className="flex items-center gap-4">
+  <div className="flex items-center gap-3">
     <a href="https://github.com/Anshuman11o" target="_blank" rel="noopener noreferrer"
       className="text-muted-foreground hover:text-primary transition-colors">
       <FaGithub className="h-5 w-5" />
@@ -52,14 +52,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 items-center">
-        <div className="mr-4 hidden md:flex">
-          <Button variant="link" className="mr-6 p-0">
+      <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
+        <div className="flex items-center md:flex">
+          <Button variant="link" className="p-0">
             <Link href="/">
               <span className="font-bold">Portfolio</span>
             </Link>
           </Button>
-          <nav className="flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-4 ml-6">
             <NavLinks />
           </nav>
         </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
           </Sheet>
         ) : null}
 
-        <div className="flex flex-1 items-center justify-end">
+        <div className="flex items-center">
           <SocialLinks />
         </div>
       </div>

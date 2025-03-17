@@ -289,6 +289,69 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   </div>
                 </section>
               </>
+            ) : experience.company === "Embee Software" ? (
+              <>
+                {/* Role Overview Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      As a Software Development Intern at Embee Software, I worked on two automation-driven projects:
+                    </p>
+                    <ul className="list-disc list-inside space-y-2">
+                      <li><strong>PDF/CSV Validator</strong> – Developed a Python-based tool to automate payroll data extraction and conversion, reducing manual effort and securing a company-wide deployment.</li>
+                      <li><strong>AI Agent/Bot Summarizer</strong> – Designed an AI-powered system to automate news summarization for press meetings using Azure Cognitive Services and OpenAI APIs, streamlining content retrieval across multiple formats.</li>
+                    </ul>
+                  </div>
+                </section>
+
+                {/* Key Achievements Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">PDF/CSV Validator:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Engineered a Python application to extract employee work-hour data from scanned payroll PDFs and convert them into structured CSV files.</li>
+                        <li>Optimized payroll processing efficiency by 20x, leading to a company-wide contract adoption.</li>
+                        <li>Implemented a Tkinter-based UI and leveraged PDFPlumber and Pandas for data extraction and transformation.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">AI Agent/Bot Summarizer:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Developed an AI agent that automates news summarization, reducing manual review time by 10x.</li>
+                        <li>Implemented a web scraper using BeautifulSoup to fetch online news articles.</li>
+                        <li>Processed multimedia content (audio, video, and images) using Azure Cognitive Services for speech-to-text and OCR functionalities.</li>
+                        <li>Indexed retrieved data in Azure Blob Storage and enabled keyword-based retrieval via Azure Search Index.</li>
+                        <li>Integrated OpenAI's language models with prompt engineering techniques for accurate, topic-based and query-based summaries.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Skills & Technologies Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Programming & Data Processing:</strong> Python (Pandas, Tkinter, JSON, XML, CSV), BeautifulSoup</li>
+                    <li><strong>Cloud & AI Services:</strong> Azure Cognitive Services, Azure Blob Storage, Azure Search Index, OpenAI APIs</li>
+                    <li><strong>Automation & UI Development:</strong> Web scraping, OCR, Speech-to-Text, Prompt Engineering</li>
+                  </ul>
+                </section>
+
+                {/* Soft Skills Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Collaboration & Teamwork:</strong> Worked closely with managers and stakeholders to align project goals with business needs.</li>
+                    <li><strong>Communication:</strong> Presented technical concepts to non-technical users, ensuring clarity and ease of adoption.</li>
+                    <li><strong>Problem-Solving:</strong> Designed scalable solutions to automate manual workflows, improving efficiency.</li>
+                    <li><strong>Documentation:</strong> Maintained clear and structured documentation for processes, ensuring smooth handover and future scalability.</li>
+                    <li><strong>Adaptability:</strong> Iterated on solutions based on user feedback, refining the tools for real-world deployment.</li>
+                  </ul>
+                </section>
+              </>
             ) : (
               <>
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
