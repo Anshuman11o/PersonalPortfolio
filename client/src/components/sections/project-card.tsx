@@ -221,30 +221,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-950.png", e)}
+                    onClick={(e) => handleImageClick("/whatsapp-1.png", e)}
                   >
                     <img
-                      src="/Screenshot-2025-03-16-950.png"
+                      src="/whatsapp-1.png"
                       alt="Porter's Five Forces Analysis"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-952.png", e)}
+                    onClick={(e) => handleImageClick("/whatsapp-2.png", e)}
                   >
                     <img
-                      src="/Screenshot-2025-03-16-952.png"
+                      src="/whatsapp-2.png"
                       alt="Economic Monitor Overview"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-9525.png", e)}
+                    onClick={(e) => handleImageClick("/whatsapp-3.png", e)}
                   >
                     <img
-                      src="/Screenshot-2025-03-16-9525.png"
+                      src="/whatsapp-3.png"
                       alt="Economic Monitor Details"
                       className="w-full h-full object-cover"
                     />
