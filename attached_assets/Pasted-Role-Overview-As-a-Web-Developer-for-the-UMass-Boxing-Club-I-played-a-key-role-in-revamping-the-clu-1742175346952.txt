@@ -1,0 +1,28 @@
+Role Overview
+As a Web Developer for the UMass Boxing Club, I played a key role in revamping the club’s website to enhance usability, improve interactivity, and streamline event management. I developed a modern, responsive interface using React, TypeScript, and Node.js, ensuring better organization and navigation for users. Additionally, I worked closely with club leadership to incorporate feedback and optimize the website’s functionality, ultimately improving membership engagement and event promotion efficiency.
+
+Key Achievements
+Website Redesign & Interactivity:
+
+Developed a more engaging, user-friendly website to replace the outdated version, enhancing navigation and usability.
+Built an intuitive dashboard, quick links, pop-ups, and a contact page using Node.js, improving accessibility.
+Boosted Membership Engagement:
+
+Implemented a React & TypeScript-based frontend, leading to a 30% increase in membership inquiries.
+Improved event promotions with backend form submissions via Express.js, reducing manual work by 40%.
+Collaboration & Continuous Improvement:
+
+Regularly gathered feedback from coaches and club leadership, incorporating their suggestions into iterative website updates.
+Ensured seamless integration of new features while maintaining an interactive and responsive design.
+Skills & Technologies
+Frontend Development: React, TypeScript, HTML, CSS
+Backend Development: Node.js, Express.js
+User Experience & UI Design: Website organization, interactive features, responsive design
+Collaboration & Feedback Integration: Working with stakeholders to improve user experience
+Performance Optimization: Reducing manual work, improving accessibility and event promotion
+Soft Skills & Work Environment Experience
+Collaboration & Teamwork: Worked directly with club leadership and coaches to align the website with their vision.
+Communication & User-Centered Design: Gathered and implemented feedback to enhance usability.
+Problem-Solving: Identified and resolved pain points in navigation and event management.
+Technical Documentation: Maintained structured documentation on Notion to track changes and future improvements.
+Adaptability: Iterated on design and functionality based on real user feedback and evolving needs.

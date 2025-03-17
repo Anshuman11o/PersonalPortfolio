@@ -144,60 +144,67 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   </ul>
                 </section>
               </>
-            ) : experience.company === "Embee Software" ? (
+            ) : experience.company === "UMass Boxing Club" ? (
               <>
+                {/* Role Overview Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
-                    <p>As a Software Development Intern at Embee Software, I worked on two automation-driven projects:</p>
-                    <ul>
-                      <li><strong>PDF/CSV Validator</strong> – Developed a Python-based tool to automate payroll data extraction and conversion, reducing manual effort and securing a company-wide deployment.</li>
-                      <li><strong>AI Agent/Bot Summarizer</strong> – Designed an AI-powered system to automate news summarization for press meetings using Azure Cognitive Services and OpenAI APIs, streamlining content retrieval across multiple formats.</li>
-                    </ul>
+                    <p>
+                      As a Web Developer for the UMass Boxing Club, I played a key role in revamping the club's website to enhance usability, improve interactivity, and streamline event management. I developed a modern, responsive interface using React, TypeScript, and Node.js, ensuring better organization and navigation for users. Additionally, I worked closely with club leadership to incorporate feedback and optimize the website's functionality, ultimately improving membership engagement and event promotion efficiency.
+                    </p>
                   </div>
                 </section>
 
+                {/* Key Achievements Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Key Achievements</h3>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">PDF/CSV Validator:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Website Redesign & Interactivity:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Engineered a Python application to extract employee work-hour data from scanned payroll PDFs and convert them into structured CSV files.</li>
-                        <li>Optimized payroll processing efficiency by 20x, leading to a company-wide contract adoption.</li>
-                        <li>Implemented a Tkinter-based UI and leveraged PDFPlumber and Pandas for data extraction and transformation.</li>
+                        <li>Developed a more engaging, user-friendly website to replace the outdated version, enhancing navigation and usability.</li>
+                        <li>Built an intuitive dashboard, quick links, pop-ups, and a contact page using Node.js, improving accessibility.</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">AI Agent/Bot Summarizer:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Boosted Membership Engagement:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Developed an AI agent that automates news summarization, reducing manual review time by 10x.</li>
-                        <li>Implemented a web scraper using BeautifulSoup to fetch online news articles.</li>
-                        <li>Processed multimedia content (audio, video, and images) using Azure Cognitive Services for speech-to-text and OCR functionalities.</li>
-                        <li>Indexed retrieved data in Azure Blob Storage and enabled keyword-based retrieval via Azure Search Index.</li>
-                        <li>Integrated OpenAI's language models with prompt engineering techniques for accurate, topic-based and query-based summaries.</li>
+                        <li>Implemented a React & TypeScript-based frontend, leading to a 30% increase in membership inquiries.</li>
+                        <li>Improved event promotions with backend form submissions via Express.js, reducing manual work by 40%.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Collaboration & Continuous Improvement:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Regularly gathered feedback from coaches and club leadership, incorporating their suggestions into iterative website updates.</li>
+                        <li>Ensured seamless integration of new features while maintaining an interactive and responsive design.</li>
                       </ul>
                     </div>
                   </div>
                 </section>
 
+                {/* Skills & Technologies Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Programming & Data Processing:</strong> Python (Pandas, Tkinter, JSON, XML, CSV), BeautifulSoup</li>
-                    <li><strong>Cloud & AI Services:</strong> Azure Cognitive Services, Azure Blob Storage, Azure Search Index, OpenAI APIs</li>
-                    <li><strong>Automation & UI Development:</strong> Web scraping, OCR, Speech-to-Text, Prompt Engineering</li>
+                    <li><strong>Frontend Development:</strong> React, TypeScript, HTML, CSS</li>
+                    <li><strong>Backend Development:</strong> Node.js, Express.js</li>
+                    <li><strong>User Experience & UI Design:</strong> Website organization, interactive features, responsive design</li>
+                    <li><strong>Collaboration & Feedback Integration:</strong> Working with stakeholders to improve user experience</li>
+                    <li><strong>Performance Optimization:</strong> Reducing manual work, improving accessibility and event promotion</li>
                   </ul>
                 </section>
 
+                {/* Soft Skills Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Collaboration & Teamwork:</strong> Worked closely with managers and stakeholders to align project goals with business needs.</li>
-                    <li><strong>Communication:</strong> Presented technical concepts to non-technical users, ensuring clarity and ease of adoption.</li>
-                    <li><strong>Problem-Solving:</strong> Designed scalable solutions to automate manual workflows, improving efficiency.</li>
-                    <li><strong>Documentation:</strong> Maintained clear and structured documentation for processes, ensuring smooth handover and future scalability.</li>
-                    <li><strong>Adaptability:</strong> Iterated on solutions based on user feedback, refining the tools for real-world deployment.</li>
+                    <li><strong>Collaboration & Teamwork:</strong> Worked directly with club leadership and coaches to align the website with their vision.</li>
+                    <li><strong>Communication & User-Centered Design:</strong> Gathered and implemented feedback to enhance usability.</li>
+                    <li><strong>Problem-Solving:</strong> Identified and resolved pain points in navigation and event management.</li>
+                    <li><strong>Technical Documentation:</strong> Maintained structured documentation on Notion to track changes and future improvements.</li>
+                    <li><strong>Adaptability:</strong> Iterated on design and functionality based on real user feedback and evolving needs.</li>
                   </ul>
                 </section>
               </>
@@ -213,13 +220,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Key Achievements</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    {experience.company === "UMass Boxing Club" && (
-                      <>
-                        <li>Increased membership inquiries by 30%</li>
-                        <li>Reduced manual processing time by 40%</li>
-                        <li>Implemented full-stack web solutions</li>
-                      </>
-                    )}
                     {experience.company === "Ferrum" && (
                       <>
                         <li>Developed a Python Tkinter application which calculates the waste metal scrape produced in the company's production line</li>
@@ -233,9 +233,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      {experience.company === "UMass Boxing Club" && (
-                        "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
-                      )}
                       {experience.company === "Ferrum" && (
                         "Python, Tkinter, Geometry"
                       )}
