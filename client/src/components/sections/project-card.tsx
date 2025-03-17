@@ -305,6 +305,40 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   </div>
                 </div>
               )}
+              {project.title === "WhatsApp Summarizer AI Agent" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.50.41 PM.png", e)}
+                  >
+                    <img
+                      src="attached_assets/Screenshot 2025-03-16 at 9.50.41 PM.png"
+                      alt="Porter's Five Forces Analysis"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.52.38 PM.png", e)}
+                  >
+                    <img
+                      src="attached_assets/Screenshot 2025-03-16 at 9.52.38 PM.png"
+                      alt="Economic Monitor Overview"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
+                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.52.45 PM.png", e)}
+                  >
+                    <img
+                      src="attached_assets/Screenshot 2025-03-16 at 9.52.45 PM.png"
+                      alt="Economic Monitor Details"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
             </section>
 
             {/* Technical Details Section */}
