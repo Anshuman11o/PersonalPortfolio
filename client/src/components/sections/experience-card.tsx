@@ -157,20 +157,20 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <div className="grid grid-cols-2 gap-4">
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176752664.png", e)}
+                      onClick={(e) => handleImageClick("/robotics-team.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176752664.png"
+                        src="/robotics-team.png"
                         alt="UMass Robotics Team"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176779282.png", e)}
+                      onClick={(e) => handleImageClick("/robotics-universities.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176779282.png"
+                        src="/robotics-universities.png"
                         alt="Form & Function Challenge Universities"
                         className="w-full h-full object-cover"
                       />
@@ -248,40 +248,40 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <div className="grid grid-cols-2 gap-4">
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176679862.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-club-home.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176679862.png"
+                        src="/boxing-club-home.png"
                         alt="UMass Boxing Club - Home Page"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176688741.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-club-events.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176688741.png"
+                        src="/boxing-club-events.png"
                         alt="UMass Boxing Club - Events Page"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176696556.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-club-dashboard.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176696556.png"
+                        src="/boxing-club-dashboard.png"
                         alt="UMass Boxing Club - Members Dashboard"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("attached_assets/image_1742176702386.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-club-contact.png", e)}
                     >
                       <img
-                        src="attached_assets/image_1742176702386.png"
+                        src="/boxing-club-contact.png"
                         alt="UMass Boxing Club - Contact Form"
                         className="w-full h-full object-cover"
                       />

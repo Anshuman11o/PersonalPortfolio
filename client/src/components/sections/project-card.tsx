@@ -187,30 +187,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.23.43 PM.png", e)}
+                    onClick={(e) => handleImageClick("/movie-recommender-1.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-12 at 1.23.43 PM.png"
+                      src="/movie-recommender-1.png"
                       alt="Movie Recommender Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.24.33 PM.png", e)}
+                    onClick={(e) => handleImageClick("/movie-recommender-2.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-12 at 1.24.33 PM.png"
+                      src="/movie-recommender-2.png"
                       alt="Movie Recommendations"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-12 at 1.34.29 PM.png", e)}
+                    onClick={(e) => handleImageClick("/movie-recommender-3.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-12 at 1.34.29 PM.png"
+                      src="/movie-recommender-3.png"
                       alt="Movie Recommendations Additional"
                       className="w-full h-full object-cover"
                     />
@@ -221,20 +221,20 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png", e)}
+                    onClick={(e) => handleImageClick("/stock-data-1.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-15 at 2.04.41 PM.png"
+                      src="/stock-data-1.png"
                       alt="Stock Data Graph View"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png", e)}
+                    onClick={(e) => handleImageClick("/stock-data-2.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-15 at 2.04.52 PM.png"
+                      src="/stock-data-2.png"
                       alt="Stock Data Table View"
                       className="w-full h-full object-cover"
                     />
@@ -245,60 +245,60 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077066293.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-1.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077066293.png"
+                      src="/cooking-inventory-1.png"
                       alt="Login Interface"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077061579.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-2.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077061579.png"
+                      src="/cooking-inventory-2.png"
                       alt="Inventory Management"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077080642.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-3.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077080642.png"
+                      src="/cooking-inventory-3.png"
                       alt="Order Management"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077085742.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-4.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077085742.png"
+                      src="/cooking-inventory-4.png"
                       alt="Menu Management"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077096674.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-5.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077096674.png"
+                      src="/cooking-inventory-5.png"
                       alt="Financial Reports"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/image_1742077108103.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-6.png", e)}
                   >
                     <img
-                      src="attached_assets/image_1742077108103.png"
+                      src="/cooking-inventory-6.png"
                       alt="Error Handling"
                       className="w-full h-full object-cover"
                     />
@@ -309,30 +309,30 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.50.41 PM.png", e)}
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-950.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-16 at 9.50.41 PM.png"
+                      src="/Screenshot-2025-03-16-950.png"
                       alt="Porter's Five Forces Analysis"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.52.38 PM.png", e)}
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-952.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-16 at 9.52.38 PM.png"
+                      src="/Screenshot-2025-03-16-952.png"
                       alt="Economic Monitor Overview"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("attached_assets/Screenshot 2025-03-16 at 9.52.45 PM.png", e)}
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-9525.png", e)}
                   >
                     <img
-                      src="attached_assets/Screenshot 2025-03-16 at 9.52.45 PM.png"
+                      src="/Screenshot-2025-03-16-9525.png"
                       alt="Economic Monitor Details"
                       className="w-full h-full object-cover"
                     />
