@@ -119,7 +119,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 ) : project.title === "WhatsApp Summarizer AI Agent" ? (
                   <>
                     <p>
-                      Built a WhatsApp Summarizer AI Agent using Python, Django, PyTorch, OpenAI API, and Twilio API. This agent processes multi-format content (PDF, images, audio, videos, Excel, Word, PPTs) and provides real-time summarization through the WhatsApp interface. It also features context-aware Q&A capabilities.
+                      Developed an AI-powered WhatsApp Summarizer Agent that generates concise, analytical summaries for work-related report files, including financial data. Built for a real-world user (my dad), the system processes various media formats—including PDFs, images, audio, videos, PPTs, and Excel files—helping users make informed decisions quickly. The project was executed using Django, OpenAI APIs, and Twilio for WhatsApp automation.
                     </p>
                   </>
                 ) : project.title === "Cooking Inventory Management System" ? (
@@ -158,9 +158,12 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 )}
                 {project.title === "WhatsApp Summarizer AI Agent" && (
                   <>
-                    <li>Multi-format content processing (PDF, images, audio, videos, Excel, Word, PPTs)</li>
-                    <li>Real-time summarization through WhatsApp interface</li>
-                    <li>Context-aware Q&A capabilities</li>
+                    <li>Automated WhatsApp Summaries: Sends AI-generated summaries via WhatsApp using Twilio</li>
+                    <li>Multi-Format Support: Extracts insights from PDFs, images, videos, audio, PPTs, Excel, and Word documents</li>
+                    <li>Context-Aware Analysis: Uses prompt engineering to generate summaries tailored to financial and business reports</li>
+                    <li>Real-Time Processing: Handles text and multimedia files efficiently with optimized pipelines</li>
+                    <li>Efficient Data Handling: Uses in-memory storage (binary streams) to prevent excessive local storage use</li>
+                    <li>Robust Debugging: Implements a logging system to track and resolve issues efficiently</li>
                   </>
                 )}
                 {project.title === "Cooking Inventory Management System" && (
@@ -314,7 +317,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   </p>
                 ) : project.title === "WhatsApp Summarizer AI Agent" ? (
                   <p>
-                    Implemented using Python and Django for backend processing, PyTorch for data extraction, OpenAI API for content analysis, and Twilio API for WhatsApp integration. Utilized advanced NLP techniques for accurate summarization.
+                    Backend: Django framework for handling requests and responses. AI Integration: OpenAI APIs for text summarization and NLP tasks. Media Processing: Utilized Whisper (audio), MoviePy (video), and PyTesseract (image text extraction). Webhook Integration: Twilio API for WhatsApp communication, connected via ngrok. Storage Optimization: Temporary in-memory storage using binary streams to handle large files. Development Process: Iterative improvement based on feedback, debugging via a structured logging system.
                   </p>
                 ) : project.title === "Stock Data Visualizer" ? (
                   <p>
