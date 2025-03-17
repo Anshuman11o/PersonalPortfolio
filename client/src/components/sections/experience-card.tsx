@@ -150,6 +150,33 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <li><strong>Technical Documentation:</strong> Maintained structured documentation on Notion, ensuring accessibility for future development.</li>
                   </ul>
                 </section>
+
+                {/* Project Gallery Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Project Gallery</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176752664.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176752664.png"
+                        alt="UMass Robotics Team"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176779282.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176779282.png"
+                        alt="Form & Function Challenge Universities"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </section>
               </>
             ) : experience.company === "UMass Boxing Club" ? (
               <>
