@@ -1,0 +1,27 @@
+Role Overview
+As a Member of the UMass Robotics Club, I contributed to the development and optimization of VR-based robotics telepresence using Meta Quest 3 and Unity. My role involved enhancing real-time robot control and data retrieval, ensuring low-latency performance, and improving human-robot interaction for the MassRobotics Form & Function Challenge, where we are building a humanoid robot designed to assist individuals with disabilities in performing physically demanding tasks.
+
+Key Achievements
+Meta Quest 3 Integration & Optimization:
+
+Enabled Unity-based robot telepresence on Meta Quest 3, allowing remote interaction with robotic systems.
+Identified and implemented optimizations to reduce lag in Quest-based robotic control, improving real-time responsiveness.
+Real-Time Robot Data Retrieval:
+
+Developed a direct server connection between the Meta Quest and the robot's Nvidia Jetson module for live data streaming.
+Facilitated real-time debugging and development by enabling continuous robot data monitoring through VR.
+Competition Participation & Humanitarian Focus:
+
+Competing in the MassRobotics Form & Function Challenge, contributing to a humanoid robot that assists individuals with disabilities in performing physically strenuous tasks.
+Assisted in integrating Unity-based simulations with robotic hardware to create a meaningful human-robot interaction.
+Skills & Technologies
+Virtual Reality & Robotics: Unity, Meta Quest 3, Robot Arm Control, VR Telepresence
+Networking & Data Processing: Server-Quest Communication, Live Robot Data Retrieval, Nvidia Jetson
+Performance Optimization: Lag Reduction, Real-Time System Debugging
+Humanitarian Robotics: Developing assistive robotics for individuals with disabilities
+Soft Skills & Work Environment Experience
+Collaboration & Teamwork: Worked closely with engineers and researchers to integrate robotics with VR.
+Problem-Solving: Identified and resolved performance bottlenecks in real-time robot-Quest communication.
+Communication: Documented development processes and findings clearly on Notion for team-wide knowledge sharing.
+Adaptability: Iterated on VR-based robotics solutions based on user testing and performance feedback.
+Technical Documentation: Maintained structured documentation on Notion, ensuring accessibility for future development.

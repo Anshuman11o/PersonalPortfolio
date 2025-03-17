@@ -21,7 +21,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: index * 0.1 }}
       >
-        <Card 
+        <Card
           className="cursor-pointer transition-transform hover:scale-[1.02] border-2 border-accent-gold/40"
           onClick={() => setIsOpen(true)}
         >
@@ -30,7 +30,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               <img
                 src={experience.imageUrl}
                 alt={experience.company}
-                className="max-w-full max-h-full object-contain" 
+                className="max-w-full max-h-full object-contain"
               />
             </div>
             <div className="flex-grow">
@@ -81,22 +81,6 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <div className="flex items-center gap-6">
-                <div className="w-32 h-32 flex items-center justify-center">
-                  <img
-                    src={experience.imageUrl}
-                    alt={experience.company}
-                    className="max-w-full max-h-full object-contain" 
-                  />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-semibold">{experience.company}</h3>
-                  <p>{experience.role}</p>
-                </div>
-              </div>
-            </section>
-
             {experience.company === "Embee Software" ? (
               <>
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
@@ -165,10 +149,10 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
 
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Key Achievements</h3>
-                  <ul className="list-disc list-inside space-y-2">
+                  <div className="space-y-6">
                     {experience.company === "UMass Robotics Club" ? (
                       <>
-                        {/* UMass Robotics Club section is replaced below */}
+                        { /* UMass Robotics Club section - Replaced with edited snippet */ }
                         <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                           <h3 className="text-2xl font-semibold">Role Overview</h3>
                           <div className="prose prose-lg max-w-none">
@@ -240,7 +224,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                         <li>Helped the company to improve their waste tracking from manual to automatic</li>
                       </>
                     )}
-                  </ul>
+                  </div>
                 </section>
 
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
