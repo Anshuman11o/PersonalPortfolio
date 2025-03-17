@@ -14,6 +14,13 @@ interface ExperienceCardProps {
 export default function ExperienceCard({ experience, index }: ExperienceCardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleImageClick = (imageUrl: string, e: React.MouseEvent<HTMLDivElement>) => {
+    // Placeholder for image click handling -  Implement actual zoom functionality here
+    console.log("Image clicked:", imageUrl);
+    e.stopPropagation(); // Prevent dialog closing
+  };
+
+
   return (
     <>
       <motion.div
@@ -206,6 +213,53 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <li><strong>Technical Documentation:</strong> Maintained structured documentation on Notion to track changes and future improvements.</li>
                     <li><strong>Adaptability:</strong> Iterated on design and functionality based on real user feedback and evolving needs.</li>
                   </ul>
+                </section>
+
+                {/* Project Gallery Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Project Gallery</h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176679862.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176679862.png"
+                        alt="UMass Boxing Club - Home Page"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176688741.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176688741.png"
+                        alt="UMass Boxing Club - Events Page"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176696556.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176696556.png"
+                        alt="UMass Boxing Club - Members Dashboard"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div
+                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                      onClick={(e) => handleImageClick("attached_assets/image_1742176702386.png", e)}
+                    >
+                      <img
+                        src="attached_assets/image_1742176702386.png"
+                        alt="UMass Boxing Club - Contact Form"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
                 </section>
               </>
             ) : (
