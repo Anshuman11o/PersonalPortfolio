@@ -97,7 +97,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
               </div>
             </section>
 
-            {experience.company === "Embee Software" && (
+            {experience.company === "Embee Software" ? (
               <>
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
@@ -142,60 +142,71 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <li><strong>Automation & UI Development:</strong> Web scraping, OCR, Speech-to-Text, Prompt Engineering</li>
                   </ul>
                 </section>
+
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Collaboration & Teamwork:</strong> Worked closely with managers and stakeholders to align project goals with business needs.</li>
+                    <li><strong>Communication:</strong> Presented technical concepts to non-technical users, ensuring clarity and ease of adoption.</li>
+                    <li><strong>Problem-Solving:</strong> Designed scalable solutions to automate manual workflows, improving efficiency.</li>
+                    <li><strong>Documentation:</strong> Maintained clear and structured documentation for processes, ensuring smooth handover and future scalability.</li>
+                    <li><strong>Adaptability:</strong> Iterated on solutions based on user feedback, refining the tools for real-world deployment.</li>
+                  </ul>
+                </section>
+              </>
+            ) : (
+              <>
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>{experience.description}</p>
+                  </div>
+                </section>
+
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    {experience.company === "UMass Robotics Club" && (
+                      <>
+                        <li>Implemented core telepresence functionalities</li>
+                        <li>Enhanced remote interaction capabilities</li>
+                        <li>Collaborated on Unity-based development</li>
+                      </>
+                    )}
+                    {experience.company === "UMass Boxing Club" && (
+                      <>
+                        <li>Increased membership inquiries by 30%</li>
+                        <li>Reduced manual processing time by 40%</li>
+                        <li>Implemented full-stack web solutions</li>
+                      </>
+                    )}
+                    {experience.company === "Ferrum" && (
+                      <>
+                        <li>Developed a Python Tkinter application which calculates the waste metal scrape produced in the company's production line</li>
+                        <li>Helped the company to improve their waste tracking from manual to automatic</li>
+                      </>
+                    )}
+                  </ul>
+                </section>
+
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      {experience.company === "UMass Robotics Club" && (
+                        "Unity Engine, C#, Telepresence Systems, Remote Interaction Technologies"
+                      )}
+                      {experience.company === "UMass Boxing Club" && (
+                        "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
+                      )}
+                      {experience.company === "Ferrum" && (
+                        "Python, Tkinter, Geometry"
+                      )}
+                    </p>
+                  </div>
+                </section>
               </>
             )}
-
-            {experience.company !== "Embee Software" && (
-              <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                <h3 className="text-2xl font-semibold">Role Overview</h3>
-                <div className="prose prose-lg max-w-none">
-                  <p>{experience.description}</p>
-                </div>
-              </section>
-            )}
-
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Key Achievements</h3>
-              <ul className="list-disc list-inside space-y-2">
-                {experience.company === "UMass Robotics Club" && (
-                  <>
-                    <li>Implemented core telepresence functionalities</li>
-                    <li>Enhanced remote interaction capabilities</li>
-                    <li>Collaborated on Unity-based development</li>
-                  </>
-                )}
-                {experience.company === "UMass Boxing Club" && (
-                  <>
-                    <li>Increased membership inquiries by 30%</li>
-                    <li>Reduced manual processing time by 40%</li>
-                    <li>Implemented full-stack web solutions</li>
-                  </>
-                )}
-                {experience.company === "Ferrum" && (
-                  <>
-                    <li>Developed a Python Tkinter application which calculates the waste metal scrape produced in the company's production line</li>
-                    <li>Helped the company to improve their waste tracking from manual to automatic</li>
-                  </>
-                )}
-              </ul>
-            </section>
-
-            <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-              <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
-              <div className="prose prose-lg max-w-none">
-                <p>
-                  {experience.company === "UMass Robotics Club" && (
-                    "Unity Engine, C#, Telepresence Systems, Remote Interaction Technologies"
-                  )}
-                  {experience.company === "UMass Boxing Club" && (
-                    "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
-                  )}
-                  {experience.company === "Ferrum" && (
-                    "Python, Tkinter, Geometry"
-                  )}
-                </p>
-              </div>
-            </section>
           </div>
         </DialogContent>
       </Dialog>
