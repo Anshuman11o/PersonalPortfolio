@@ -81,7 +81,70 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {experience.company === "Embee Software" ? (
+            {experience.company === "UMass Robotics Club" ? (
+              <>
+                {/* Role Overview Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      As a Member of the UMass Robotics Club, I contributed to the development and optimization of VR-based robotics telepresence using Meta Quest 3 and Unity. My role involved enhancing real-time robot control and data retrieval, ensuring low-latency performance, and improving human-robot interaction for the MassRobotics Form & Function Challenge, where we are building a humanoid robot designed to assist individuals with disabilities in performing physically demanding tasks.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Key Achievements Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Meta Quest 3 Integration & Optimization:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Enabled Unity-based robot telepresence on Meta Quest 3, allowing remote interaction with robotic systems.</li>
+                        <li>Identified and implemented optimizations to reduce lag in Quest-based robotic control, improving real-time responsiveness.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Real-Time Robot Data Retrieval:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Developed a direct server connection between the Meta Quest and the robot's Nvidia Jetson module for live data streaming.</li>
+                        <li>Facilitated real-time debugging and development by enabling continuous robot data monitoring through VR.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Competition Participation & Humanitarian Focus:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Competing in the MassRobotics Form & Function Challenge, contributing to a humanoid robot that assists individuals with disabilities in performing physically strenuous tasks.</li>
+                        <li>Assisted in integrating Unity-based simulations with robotic hardware to create a meaningful human-robot interaction.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Skills & Technologies Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Virtual Reality & Robotics:</strong> Unity, Meta Quest 3, Robot Arm Control, VR Telepresence</li>
+                    <li><strong>Networking & Data Processing:</strong> Server-Quest Communication, Live Robot Data Retrieval, Nvidia Jetson</li>
+                    <li><strong>Performance Optimization:</strong> Lag Reduction, Real-Time System Debugging</li>
+                    <li><strong>Humanitarian Robotics:</strong> Developing assistive robotics for individuals with disabilities</li>
+                  </ul>
+                </section>
+
+                {/* Soft Skills Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Collaboration & Teamwork:</strong> Worked closely with engineers and researchers to integrate robotics with VR.</li>
+                    <li><strong>Problem-Solving:</strong> Identified and resolved performance bottlenecks in real-time robot-Quest communication.</li>
+                    <li><strong>Communication:</strong> Documented development processes and findings clearly on Notion for team-wide knowledge sharing.</li>
+                    <li><strong>Adaptability:</strong> Iterated on VR-based robotics solutions based on user testing and performance feedback.</li>
+                    <li><strong>Technical Documentation:</strong> Maintained structured documentation on Notion, ensuring accessibility for future development.</li>
+                  </ul>
+                </section>
+              </>
+            ) : experience.company === "Embee Software" ? (
               <>
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
@@ -149,68 +212,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
 
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Key Achievements</h3>
-                  <div className="space-y-6">
-                    {experience.company === "UMass Robotics Club" ? (
-                      <>
-                        { /* UMass Robotics Club section - Replaced with edited snippet */ }
-                        <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                          <h3 className="text-2xl font-semibold">Role Overview</h3>
-                          <div className="prose prose-lg max-w-none">
-                            <p>
-                              As a Member of the UMass Robotics Club, I contributed to the development and optimization of VR-based robotics telepresence using Meta Quest 3 and Unity. My role involved enhancing real-time robot control and data retrieval, ensuring low-latency performance, and improving human-robot interaction for the MassRobotics Form & Function Challenge, where we are building a humanoid robot designed to assist individuals with disabilities in performing physically demanding tasks.
-                            </p>
-                          </div>
-                        </section>
-
-                        <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                          <h3 className="text-2xl font-semibold">Key Achievements</h3>
-                          <div className="space-y-6">
-                            <div>
-                              <h4 className="text-xl font-semibold mb-2">Meta Quest 3 Integration & Optimization:</h4>
-                              <ul className="list-disc list-inside space-y-2">
-                                <li>Enabled Unity-based robot telepresence on Meta Quest 3, allowing remote interaction with robotic systems.</li>
-                                <li>Identified and implemented optimizations to reduce lag in Quest-based robotic control, improving real-time responsiveness.</li>
-                              </ul>
-                            </div>
-                            <div>
-                              <h4 className="text-xl font-semibold mb-2">Real-Time Robot Data Retrieval:</h4>
-                              <ul className="list-disc list-inside space-y-2">
-                                <li>Developed a direct server connection between the Meta Quest and the robot's Nvidia Jetson module for live data streaming.</li>
-                                <li>Facilitated real-time debugging and development by enabling continuous robot data monitoring through VR.</li>
-                              </ul>
-                            </div>
-                            <div>
-                              <h4 className="text-xl font-semibold mb-2">Competition Participation & Humanitarian Focus:</h4>
-                              <ul className="list-disc list-inside space-y-2">
-                                <li>Competing in the MassRobotics Form & Function Challenge, contributing to a humanoid robot that assists individuals with disabilities in performing physically strenuous tasks.</li>
-                                <li>Assisted in integrating Unity-based simulations with robotic hardware to create a meaningful human-robot interaction.</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </section>
-
-                        <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                          <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
-                          <ul className="list-disc list-inside space-y-2">
-                            <li><strong>Virtual Reality & Robotics:</strong> Unity, Meta Quest 3, Robot Arm Control, VR Telepresence</li>
-                            <li><strong>Networking & Data Processing:</strong> Server-Quest Communication, Live Robot Data Retrieval, Nvidia Jetson</li>
-                            <li><strong>Performance Optimization:</strong> Lag Reduction, Real-Time System Debugging</li>
-                            <li><strong>Humanitarian Robotics:</strong> Developing assistive robotics for individuals with disabilities</li>
-                          </ul>
-                        </section>
-
-                        <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                          <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
-                          <ul className="list-disc list-inside space-y-2">
-                            <li><strong>Collaboration & Teamwork:</strong> Worked closely with engineers and researchers to integrate robotics with VR.</li>
-                            <li><strong>Problem-Solving:</strong> Identified and resolved performance bottlenecks in real-time robot-Quest communication.</li>
-                            <li><strong>Communication:</strong> Documented development processes and findings clearly on Notion for team-wide knowledge sharing.</li>
-                            <li><strong>Adaptability:</strong> Iterated on VR-based robotics solutions based on user testing and performance feedback.</li>
-                            <li><strong>Technical Documentation:</strong> Maintained structured documentation on Notion, ensuring accessibility for future development.</li>
-                          </ul>
-                        </section>
-                      </>
-                    ) : null}
+                  <ul className="list-disc list-inside space-y-2">
                     {experience.company === "UMass Boxing Club" && (
                       <>
                         <li>Increased membership inquiries by 30%</li>
@@ -224,16 +226,13 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                         <li>Helped the company to improve their waste tracking from manual to automatic</li>
                       </>
                     )}
-                  </div>
+                  </ul>
                 </section>
 
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      {experience.company === "UMass Robotics Club" && (
-                        "Unity Engine, C#, Telepresence Systems, Remote Interaction Technologies"
-                      )}
                       {experience.company === "UMass Boxing Club" && (
                         "React, TypeScript, Node.js, Express.js, Frontend Development, Backend Development, Form Handling"
                       )}
