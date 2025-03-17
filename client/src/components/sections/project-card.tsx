@@ -217,6 +217,40 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   </div>
                 </div>
               )}
+              {project.title === "WhatsApp Summarizer AI Agent" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-950.png", e)}
+                  >
+                    <img
+                      src="/Screenshot-2025-03-16-950.png"
+                      alt="Porter's Five Forces Analysis"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-952.png", e)}
+                  >
+                    <img
+                      src="/Screenshot-2025-03-16-952.png"
+                      alt="Economic Monitor Overview"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
+                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-9525.png", e)}
+                  >
+                    <img
+                      src="/Screenshot-2025-03-16-9525.png"
+                      alt="Economic Monitor Details"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
               {project.title === "Stock Data Visualizer" && (
                 <div className="grid grid-cols-2 gap-4">
                   <div
@@ -300,40 +334,6 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <img
                       src="/cooking-inventory-6.png"
                       alt="Error Handling"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-              {project.title === "WhatsApp Summarizer AI Agent" && (
-                <div className="grid grid-cols-2 gap-4">
-                  <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-950.png", e)}
-                  >
-                    <img
-                      src="/Screenshot-2025-03-16-950.png"
-                      alt="Porter's Five Forces Analysis"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-952.png", e)}
-                  >
-                    <img
-                      src="/Screenshot-2025-03-16-952.png"
-                      alt="Economic Monitor Overview"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("/Screenshot-2025-03-16-9525.png", e)}
-                  >
-                    <img
-                      src="/Screenshot-2025-03-16-9525.png"
-                      alt="Economic Monitor Details"
                       className="w-full h-full object-cover"
                     />
                   </div>
