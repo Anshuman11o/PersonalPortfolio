@@ -166,8 +166,9 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Key Achievements</h3>
                   <ul className="list-disc list-inside space-y-2">
-                    {experience.company === "UMass Robotics Club" && (
+                    {experience.company === "UMass Robotics Club" ? (
                       <>
+                        {/* UMass Robotics Club section is replaced below */}
                         <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                           <h3 className="text-2xl font-semibold">Role Overview</h3>
                           <div className="prose prose-lg max-w-none">
@@ -225,7 +226,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                           </ul>
                         </section>
                       </>
-                    )}
+                    ) : null}
                     {experience.company === "UMass Boxing Club" && (
                       <>
                         <li>Increased membership inquiries by 30%</li>
