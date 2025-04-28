@@ -157,21 +157,21 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <div className="grid grid-cols-2 gap-4">
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/robotics-team.png", e)}
+                      onClick={(e) => handleImageClick("/robotics-1.png", e)}
                     >
                       <img
-                        src="/robotics-team.png"
-                        alt="UMass Robotics Team"
+                        src="/robotics-1.png"
+                        alt="UMass Robotics Project"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/robotics-universities.png", e)}
+                      onClick={(e) => handleImageClick("/robotics-2.png", e)}
                     >
                       <img
-                        src="/robotics-universities.png"
-                        alt="Form & Function Challenge Universities"
+                        src="/robotics-2.png"
+                        alt="UMass Robotics System"
                         className="w-full h-full object-cover"
                       />
                     </div>
