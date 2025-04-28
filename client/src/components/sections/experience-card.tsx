@@ -248,41 +248,21 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <div className="grid grid-cols-2 gap-4">
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/boxing-club-home.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-1.png", e)}
                     >
                       <img
-                        src="/boxing-club-home.png"
+                        src="/boxing-1.png"
                         alt="UMass Boxing Club - Home Page"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/boxing-club-events.png", e)}
+                      onClick={(e) => handleImageClick("/boxing-2.png", e)}
                     >
                       <img
-                        src="/boxing-club-events.png"
+                        src="/boxing-2.png"
                         alt="UMass Boxing Club - Events Page"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div
-                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/boxing-club-dashboard.png", e)}
-                    >
-                      <img
-                        src="/boxing-club-dashboard.png"
-                        alt="UMass Boxing Club - Members Dashboard"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div
-                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/boxing-club-contact.png", e)}
-                    >
-                      <img
-                        src="/boxing-club-contact.png"
-                        alt="UMass Boxing Club - Contact Form"
                         className="w-full h-full object-cover"
                       />
                     </div>
