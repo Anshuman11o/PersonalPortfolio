@@ -269,62 +269,62 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-1.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-1.jpg", e)}
                   >
                     <img
-                      src="/cooking-inventory-1.png"
+                      src="/cooking-inventory-1.jpg"
                       alt="Login Interface"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-2.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-2.jpg", e)}
                   >
                     <img
-                      src="/cooking-inventory-2.png"
+                      src="/cooking-inventory-2.jpg"
                       alt="Inventory Management"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-3.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-3.jpg", e)}
                   >
                     <img
-                      src="/cooking-inventory-3.png"
-                      alt="Order Management"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-4.png", e)}
-                  >
-                    <img
-                      src="/cooking-inventory-4.png"
-                      alt="Menu Management"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-5.png", e)}
-                  >
-                    <img
-                      src="/cooking-inventory-5.png"
+                      src="/cooking-inventory-3.jpg"
                       alt="Financial Reports"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("/cooking-inventory-6.png", e)}
+                    onClick={(e) => handleImageClick("/cooking-inventory-4.jpg", e)}
                   >
                     <img
-                      src="/cooking-inventory-6.png"
+                      src="/cooking-inventory-4.jpg"
                       alt="Error Handling"
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/cooking-inventory-5.jpg", e)}
+                  >
+                    <img
+                      src="/cooking-inventory-5.jpg"
+                      alt="Menu Management"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/cooking-inventory-6.jpg", e)}
+                  >
+                    <img
+                      src="/cooking-inventory-6.jpg"
+                      alt="Order Management"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
