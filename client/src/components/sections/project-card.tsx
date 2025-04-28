@@ -218,23 +218,23 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 </div>
               )}
               {project.title === "WhatsApp Summarizer AI Agent" && (
-                <div className="grid grid-cols-1 gap-4">
+                <div className="grid grid-cols-2 gap-4">
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("https://storage.googleapis.com/replit/images/1745803619302_Screenshot%202025-03-16%20at%209.50.41%20PM.png", e)}
+                    onClick={(e) => handleImageClick("/whatsapp-2.jpg", e)}
                   >
                     <img
-                      src="https://storage.googleapis.com/replit/images/1745803619302_Screenshot%202025-03-16%20at%209.50.41%20PM.png"
+                      src="/whatsapp-2.jpg"
                       alt="Porter's Five Forces Analysis - WhatsApp Summary"
                       className="w-full h-full object-contain"
                     />
                   </div>
                   <div
                     className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                    onClick={(e) => handleImageClick("https://storage.googleapis.com/replit/images/1745803630615_Screenshot%202025-03-16%20at%209.51.17%20PM.png", e)}
+                    onClick={(e) => handleImageClick("/whatsapp-1.jpg", e)}
                   >
                     <img
-                      src="https://storage.googleapis.com/replit/images/1745803630615_Screenshot%202025-03-16%20at%209.51.17%20PM.png"
+                      src="/whatsapp-1.jpg"
                       alt="Economic Monitor Report - WhatsApp Summary"
                       className="w-full h-full object-contain"
                     />
