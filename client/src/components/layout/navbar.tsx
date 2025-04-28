@@ -52,14 +52,14 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center justify-between px-4">
-        <div className="flex items-center md:flex">
-          <Button variant="link" className="p-0">
+      <div className="container flex h-14 max-w-screen-2xl items-center px-4">
+        <div className="flex items-center mr-auto">
+          <Button variant="link" className="p-0 ml-4">
             <Link href="/">
               <span className="font-bold">Portfolio</span>
             </Link>
           </Button>
-          <nav className="hidden md:flex items-center space-x-4 ml-6">
+          <nav className="hidden md:flex items-center space-x-6 ml-8">
             <NavLinks />
           </nav>
         </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
           </Sheet>
         ) : null}
 
-        <div className="flex items-center">
+        <div className="flex items-center gap-4 mr-4">
           <SocialLinks />
         </div>
       </div>
