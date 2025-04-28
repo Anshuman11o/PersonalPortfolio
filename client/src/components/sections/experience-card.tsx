@@ -154,25 +154,15 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 {/* Project Gallery Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Project Gallery</h3>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     <div
                       className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/robotics-1.png", e)}
+                      onClick={(e) => handleImageClick("/umass-robotics-1.jpg", e)}
                     >
                       <img
-                        src="/robotics-1.png"
+                        src="/umass-robotics-1.jpg"
                         alt="UMass Robotics Project"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div
-                      className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
-                      onClick={(e) => handleImageClick("/robotics-2.png", e)}
-                    >
-                      <img
-                        src="/robotics-2.png"
-                        alt="UMass Robotics System"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </div>
