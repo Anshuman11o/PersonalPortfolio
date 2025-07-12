@@ -6,11 +6,11 @@ const EXPERIENCES: Experience[] = [
   {
     id: 1,
     company: "Commonwealth of Massachusetts (EEA)",
-    role: "Summer Internship (ongoing)",
+    role: "AI Software Engineer Intern (Ongoing)",
     description: "Collaborating with the Executive Office of Energy and Environmental Affairs (EEA) to develop an AI chatbot for the agency's public website to reduce support staff query load by more than 70%. AI-powered RAG chatbot built on AWS will guide users through permit application processes and help them retrieve information tailored to their specific permit type.",
     imageUrl: "/commonwealth-ma-logo.png",
     githubUrl: null,
-    dateRange: "Jun 2025 - Present"
+    dateRange: "Mar 2025 - Present"
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const EXPERIENCES: Experience[] = [
     description: "Designed and developed a modern, responsive website for the UMass Boxing Club using HTML, CSS, and JavaScript. Created an engaging platform that showcases club activities, training schedules, and member achievements. Implemented user-friendly navigation and mobile-responsive design.",
     imageUrl: "/images/boxing-club-logo.png",
     githubUrl: "https://github.com/Anshuman11o/Umass-Boxing-club",
-    dateRange: "Mar - May 2024"
+    dateRange: "Jan 2024 - Present"
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const EXPERIENCES: Experience[] = [
     description: "Worked at Ferrum as an Intern for 2 weeks. Developed an app for the company using python. Learnt about the water purifier manufacturing process. Understood how a water purifier business is managed.",
     imageUrl: "/images/ferrum-logo.png",
     githubUrl: "https://github.com/Anshuman11o/Scrap-Calculator-Application",
-    dateRange: "Dec 2023"
+    dateRange: "Jul - Jul 2022"
   }
 ];
 
