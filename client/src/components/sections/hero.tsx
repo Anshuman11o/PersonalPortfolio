@@ -16,7 +16,7 @@ export default function Hero() {
         </h1>
         <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
           Computer Science student at UMass Amherst with a passion for AI, software development, and robotics. 
-          I collaborate on innovative robotics projects and explore how technology can drive groundbreaking solutions and transformative change.
+          I collaborate on innovative AI, ML and Robotics project and explore how technology can drive groundbreaking solutions and transformative change. Check out my projects and experiences to learn more about my work!
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Button 
