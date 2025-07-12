@@ -66,21 +66,28 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto p-6 border-2 border-accent-gold/20">
           <DialogHeader className="space-y-4">
-            <DialogTitle className="text-3xl font-bold flex items-center justify-between">
+            <DialogTitle className="text-3xl font-bold flex items-start justify-between">
               <span>{experience.role} at {experience.company}</span>
-              {experience.githubUrl && (
-                <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
-                  <a
-                    href={experience.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <FaGithub className="h-4 w-4" />
-                    View on GitHub
-                  </a>
-                </Button>
-              )}
+              <div className="flex flex-col items-end gap-2">
+                {experience.dateRange && (
+                  <span className="text-lg font-medium text-accent-gold bg-accent-gold/10 px-3 py-1 rounded-md">
+                    {experience.dateRange}
+                  </span>
+                )}
+                {experience.githubUrl && (
+                  <Button variant="outline" asChild className="border-accent-gold text-accent-gold hover:bg-accent-gold/10">
+                    <a
+                      href={experience.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <FaGithub className="h-4 w-4" />
+                      View on GitHub
+                    </a>
+                  </Button>
+                )}
+              </div>
             </DialogTitle>
             <DialogDescription className="text-lg">
               A detailed overview of my role and contributions
