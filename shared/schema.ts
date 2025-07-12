@@ -17,6 +17,7 @@ export const experiences = pgTable("experiences", {
   description: text("description").notNull(),
   imageUrl: text("image_url").notNull(),
   githubUrl: text("github_url"),
+  dateRange: text("date_range"),
 });
 
 export const insertProjectSchema = createInsertSchema(projects).omit({ id: true });
