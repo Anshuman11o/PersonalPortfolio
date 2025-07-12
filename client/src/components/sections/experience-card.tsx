@@ -88,7 +88,70 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {experience.company === "UMass Robotics Club" ? (
+            {experience.company === "Commonwealth of Massachusetts (EEA)" ? (
+              <>
+                {/* Role Overview Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      As a Summer Intern with the Commonwealth of Massachusetts Executive Office of Energy and Environmental Affairs (EEA), I am currently collaborating on developing an AI-powered chatbot for the agency's public website. This ongoing project aims to reduce support staff query load by more than 70% by providing automated assistance to citizens navigating permit application processes and environmental regulations.
+                    </p>
+                  </div>
+                </section>
+
+                {/* Key Achievements Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Key Achievements (In Progress)</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">AI Chatbot Development:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Developing an AI-powered RAG (Retrieval Augmented Generation) chatbot to automate citizen support services.</li>
+                        <li>Designing the system to reduce support staff query load by more than 70% through intelligent automation.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">AWS Implementation:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Building the chatbot infrastructure on AWS cloud services for scalability and reliability.</li>
+                        <li>Implementing tailored information retrieval based on specific permit types and user requirements.</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Public Service Enhancement:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Focusing on improving citizen experience with permit application processes and environmental compliance.</li>
+                        <li>Working directly with government agency stakeholders to understand and address real-world public service challenges.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Skills & Technologies Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>AI & Machine Learning:</strong> RAG (Retrieval Augmented Generation), Natural Language Processing</li>
+                    <li><strong>Cloud Infrastructure:</strong> AWS Services, Cloud-based AI Solutions</li>
+                    <li><strong>Government Technology:</strong> Public Service Automation, Citizen Support Systems</li>
+                    <li><strong>Project Development:</strong> Stakeholder Collaboration, Requirements Analysis</li>
+                  </ul>
+                </section>
+
+                {/* Soft Skills Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li><strong>Government Collaboration:</strong> Working directly with state agency officials and understanding public service requirements.</li>
+                    <li><strong>Stakeholder Communication:</strong> Translating technical concepts for government stakeholders and end-users.</li>
+                    <li><strong>Public Impact Focus:</strong> Developing solutions that directly benefit citizens and improve government services.</li>
+                    <li><strong>Adaptability:</strong> Working in an ongoing project environment with evolving requirements and feedback.</li>
+                    <li><strong>Professional Development:</strong> Gaining experience in government technology and public sector innovation.</li>
+                  </ul>
+                </section>
+              </>
+            ) : experience.company === "UMass Robotics Club" ? (
               <>
                 {/* Role Overview Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
