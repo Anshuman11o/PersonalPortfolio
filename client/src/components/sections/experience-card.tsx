@@ -138,24 +138,110 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                 {/* Skills & Technologies Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    <li><strong>AI & Machine Learning:</strong> RAG (Retrieval Augmented Generation), Natural Language Processing</li>
-                    <li><strong>Cloud Infrastructure:</strong> AWS Services, Cloud-based AI Solutions</li>
-                    <li><strong>Government Technology:</strong> Public Service Automation, Citizen Support Systems</li>
-                    <li><strong>Project Development:</strong> Stakeholder Collaboration, Requirements Analysis</li>
-                  </ul>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">AI & Machine Learning:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Retrieval-Augmented Generation (RAG) pipelines with AWS Bedrock</li>
+                        <li>Vector embeddings & semantic search</li>
+                        <li>Anthropic Claude 3.7 Sonnet via Bedrock (prompt engineering, query "funneling")</li>
+                        <li>Natural Language Processing</li>
+                        <li>Text chunking & summarization (NLTK)</li>
+                        <li>Keyword extraction & tagging</li>
+                        <li>OCR integration (Tesseract) for PDF/text ingestion</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Web Scraping & Data Ingestion:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Python (BeautifulSoup) for static HTML</li>
+                        <li>Firecrawl API for JavaScript-rendered pages</li>
+                        <li>Document processing (PyPDF2, python-docx, OpenCV preprocessing)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Indexing & Search:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>AWS Bedrock Knowledge Base (document ingestion, chunking, embedding)</li>
+                        <li>AWS OpenSearch (full-text + vector search + analytics)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Cloud Infrastructure & DevOps:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>AWS S3 (versioned buckets, lifecycle policies)</li>
+                        <li>Serverless & container orchestration</li>
+                        <li>AWS Lambda & Step Functions for ETL workflows</li>
+                        <li>Docker + AWS Fargate/ECS for scalable microservices</li>
+                        <li>Infrastructure-as-Code with AWS CloudFormation</li>
+                        <li>Security & networking (IAM roles/policies, PrivateLink, VPC, OAuth 2.0/JWT)</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Chat Interface & Frontend:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>AWS Lex slot-based dialogs on mass.gov</li>
+                        <li>Streamlit-based Admin Dashboard (usage metrics, CSAT surveys, system health)</li>
+                        <li>WCAG-compliant, responsive UI</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Monitoring & Observability:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>AWS CloudWatch & CloudTrail (query metrics, error rates, guardrail triggers)</li>
+                        <li>Real-time dashboards and alerting</li>
+                      </ul>
+                    </div>
+                  </div>
                 </section>
 
                 {/* Soft Skills Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Government Collaboration:</strong> Working directly with state agency officials and understanding public service requirements.</li>
-                    <li><strong>Stakeholder Communication:</strong> Translating technical concepts for government stakeholders and end-users.</li>
-                    <li><strong>Public Impact Focus:</strong> Developing solutions that directly benefit citizens and improve government services.</li>
-                    <li><strong>Adaptability:</strong> Working in an ongoing project environment with evolving requirements and feedback.</li>
-                    <li><strong>Professional Development:</strong> Gaining experience in government technology and public sector innovation.</li>
-                  </ul>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Government Collaboration:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Partnered directly with EEA policy experts and agency officials</li>
+                        <li>Translated complex regulatory requirements into guided chatbot dialogs</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Stakeholder Communication:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Led requirements analysis workshops</li>
+                        <li>Authored runbooks, architecture docs, and non-technical summaries</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Public Impact Focus:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Automated permit guidance to reduce support-ticket volume</li>
+                        <li>Measured and reported CSAT improvements and self-navigation success rates</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Agile Development & Adaptability:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Operated in a hybrid Scrum environment with iterative sprints</li>
+                        <li>Rapidly adapted pipelines and schemas to evolving mass.gov content</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Cross-Functional Teamwork:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Coordinated across engineering, UX, and policy teams</li>
+                        <li>Enforced code quality, security best practices, and accessibility standards</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Professional Growth & Problem Solving:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Deepened expertise in cloud AI, ETL debugging, and production-grade deployments</li>
+                        <li>Implemented robust error handling, retry logic, and performance optimizations</li>
+                      </ul>
+                    </div>
+                  </div>
                 </section>
               </>
             ) : experience.company === "UMass Robotics Club" ? (

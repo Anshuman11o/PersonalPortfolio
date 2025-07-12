@@ -1,0 +1,95 @@
+Skills & Technologies
+AI & Machine Learning
+
+Retrieval-Augmented Generation (RAG) pipelines with AWS Bedrock
+
+Vector embeddings & semantic search
+
+Anthropic Claude 3.7 Sonnet via Bedrock (prompt engineering, query “funneling”)
+
+Natural Language Processing
+
+Text chunking & summarization (NLTK)
+
+Keyword extraction & tagging
+
+OCR integration (Tesseract) for PDF/text ingestion
+
+Web Scraping & Data Ingestion
+
+Python (BeautifulSoup) for static HTML
+
+Firecrawl API for JavaScript-rendered pages
+
+Document processing (PyPDF2, python-docx, OpenCV preprocessing)
+
+Indexing & Search
+
+AWS Bedrock Knowledge Base (document ingestion, chunking, embedding)
+
+AWS OpenSearch (full-text + vector search + analytics)
+
+Cloud Infrastructure & DevOps
+
+AWS S3 (versioned buckets, lifecycle policies)
+
+Serverless & container orchestration
+
+AWS Lambda & Step Functions for ETL workflows
+
+Docker + AWS Fargate/ECS for scalable microservices
+
+Infrastructure-as-Code with AWS CloudFormation
+
+Security & networking (IAM roles/policies, PrivateLink, VPC, OAuth 2.0/JWT)
+
+Chat Interface & Frontend
+
+AWS Lex slot-based dialogs on mass.gov
+
+Streamlit-based Admin Dashboard (usage metrics, CSAT surveys, system health)
+
+WCAG-compliant, responsive UI
+
+Monitoring & Observability
+
+AWS CloudWatch & CloudTrail (query metrics, error rates, guardrail triggers)
+
+Real-time dashboards and alerting
+
+Soft Skills & Work Environment Experience
+Government Collaboration
+
+Partnered directly with EEA policy experts and agency officials
+
+Translated complex regulatory requirements into guided chatbot dialogs
+
+Stakeholder Communication
+
+Led requirements analysis workshops
+
+Authored runbooks, architecture docs, and non-technical summaries
+
+Public Impact Focus
+
+Automated permit guidance to reduce support-ticket volume
+
+Measured and reported CSAT improvements and self-navigation success rates
+
+Agile Development & Adaptability
+
+Operated in a hybrid Scrum environment with iterative sprints
+
+Rapidly adapted pipelines and schemas to evolving mass.gov content
+
+Cross-Functional Teamwork
+
+Coordinated across engineering, UX, and policy teams
+
+Enforced code quality, security best practices, and accessibility standards
+
+Professional Growth & Problem Solving
+
+Deepened expertise in cloud AI, ETL debugging, and production-grade deployments
+
+Implemented robust error handling, retry logic, and performance optimizations
