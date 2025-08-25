@@ -6,11 +6,11 @@ const EXPERIENCES: Experience[] = [
   {
     id: 1,
     company: "Commonwealth of Massachusetts (EEA)",
-    role: "AI Software Engineer Intern (Ongoing)",
+    role: "AI Software Engineer Intern",
     description: "Collaborating with the Executive Office of Energy and Environmental Affairs (EEA) to develop an AI chatbot for the agency's public website to reduce support staff query load by more than 70%. AI-powered RAG chatbot built on AWS will guide users through permit application processes and help them retrieve information tailored to their specific permit type.",
     imageUrl: "/commonwealth-ma-logo.png",
     githubUrl: null,
-    dateRange: "Mar 2025 - Present"
+    dateRange: "Mar 2025 - August 2025"
   },
   {
     id: 2,
