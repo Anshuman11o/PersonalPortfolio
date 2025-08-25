@@ -95,7 +95,138 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {experience.company === "Commonwealth of Massachusetts (EEA)" ? (
+            {experience.company === "IOMICS Corporation" ? (
+              <>
+                {/* Role Overview Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      As a Machine Learning Intern at IOMICS Corporation, I am developing scalable data pipelines for transforming clinical observational datasets into structured, analysis-ready formats for various machine learning models. My work focuses on <strong>propositionalization</strong>, building <strong>Extract, Transform, Load (ETL) pipelines</strong>, preprocessing workflows, schema configuration, and data quality reporting to support downstream Artificial Intelligence (AI) and research applications in the biotechnology sector.
+                    </p>
+                    <p>
+                      IOMICS Corporation specializes in applying advanced data science and machine learning techniques to biotechnology and clinical research, working with complex datasets that require sophisticated processing and transformation methodologies.
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <strong>Company Website:</strong> 
+                      <a 
+                        href="https://iomics.ai/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-accent-gold hover:text-accent-gold/80 underline"
+                      >
+                        https://iomics.ai/
+                      </a>
+                    </p>
+                  </div>
+                </section>
+
+                {/* Current Focus & Achievements Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Current Focus & Achievements</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Data Pipeline Development:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Building scalable Extract, Transform, Load (ETL) pipelines using PySpark for large-scale clinical dataset processing</li>
+                        <li>Implementing data quality reporting systems to ensure accuracy and consistency in downstream applications</li>
+                        <li>Developing schema configuration workflows for standardizing diverse clinical observational data formats</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Machine Learning Infrastructure:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Creating analysis-ready datasets optimized for various machine learning model architectures</li>
+                        <li>Implementing propositionalization techniques to convert relational data into flat feature representations</li>
+                        <li>Designing preprocessing workflows that maintain data integrity while optimizing for ML performance</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Process Improvement & Documentation:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Enhancing documentation standards and testing protocols for data pipeline reliability</li>
+                        <li>Improving integration processes between data transformation stages and downstream AI applications</li>
+                        <li>Contributing to biotechnology research applications through robust data engineering practices</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Skills & Technologies Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Data Processing & Analytics:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>PySpark for distributed data processing and large-scale analytics</li>
+                        <li>Python with Pandas for data manipulation and analysis</li>
+                        <li>Apache Arrow for high-performance data interchange and processing</li>
+                        <li>Extract, Transform, Load (ETL) pipeline design and implementation</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Data Formats & Storage:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Hierarchical Data Format version 5 (HDF5) for scientific data storage</li>
+                        <li>Parquet for columnar storage and analytics optimization</li>
+                        <li>JavaScript Object Notation (JSON) for structured data exchange</li>
+                        <li>eXtensible Markup Language (XML) for document processing and data interchange</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Machine Learning & AI:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Machine Learning pipeline development and optimization</li>
+                        <li>Artificial Intelligence (AI) systems for research applications</li>
+                        <li>Data propositionalization for ML model compatibility</li>
+                        <li>Clinical data analysis and biotechnology applications</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Software Engineering & Quality:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Documentation standards and technical writing</li>
+                        <li>Testing protocols for data pipeline reliability</li>
+                        <li>Integration processes and workflow optimization</li>
+                        <li>Schema configuration and data quality assurance</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Professional Development & Environment */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Professional Development & Work Environment</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Biotechnology & Research Focus:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Gaining expertise in biotechnology applications of machine learning and data science</li>
+                        <li>Working with clinical observational datasets and research-grade data processing</li>
+                        <li>Understanding regulatory and quality standards in biotechnology data management</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Technical Leadership & Collaboration:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Contributing to cross-functional teams in hybrid work environment (Holyoke, MA)</li>
+                        <li>Developing scalable solutions that support multiple downstream research applications</li>
+                        <li>Implementing best practices for data engineering in scientific computing environments</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Continuous Learning & Innovation:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Staying current with emerging technologies in distributed computing and data processing</li>
+                        <li>Applying academic machine learning knowledge to real-world biotechnology challenges</li>
+                        <li>Contributing to the advancement of AI applications in clinical and research settings</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </>
+            ) : experience.company === "Commonwealth of Massachusetts (EEA)" ? (
               <>
                 {/* Role Overview Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
