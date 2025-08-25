@@ -19,7 +19,7 @@ export default function Hero() {
           className="mb-6"
         >
           <img
-            src="/test-working-image.png"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23FFD700'/%3E%3Ctext x='50' y='55' text-anchor='middle' fill='%23000' font-size='20'%3EA%3C/text%3E%3C/svg%3E"
             alt="Anshuman Agarwal"
             className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent-gold/30 shadow-lg mx-auto"
           />
