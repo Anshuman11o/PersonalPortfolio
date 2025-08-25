@@ -6,7 +6,7 @@ const EXPERIENCES: Experience[] = [
   {
     id: 1,
     company: "IOMICS Corporation",
-    role: "Machine Learning Intern",
+    role: "Machine Learning Intern (Ongoing)",
     description: "Developing scalable data pipelines for transforming clinical observational datasets into structured, analysis-ready formats for various machine learning models. Focused on propositionalization, building Extract, Transform, Load (ETL) pipelines, preprocessing workflows, schema configuration, and data quality reporting to support downstream Artificial Intelligence (AI) and research applications.",
     imageUrl: "/iomics-logo.png",
     githubUrl: null,
