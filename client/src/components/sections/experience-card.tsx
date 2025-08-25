@@ -102,10 +102,10 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      As part of the AI for the Commonwealth (AI4CW) Cohort 3 program, I developed a scalable AI-powered Permit Navigator Chatbot for the Massachusetts Executive Office of Energy and Environmental Affairs (EEA). The project transformed how Massachusetts residents, contractors, and businesses find environmental permits by creating an AI-driven chatbot that uses Retrieval-Augmented Generation (RAG) to provide accurate, contextual guidance through 400+ permit types and 1,200+ supporting documents.
+                      As part of the AI for the Commonwealth (AI4CW) Cohort 3 program, I developed a scalable AI-powered Permit Navigator Chatbot for the Massachusetts Executive Office of Energy and Environmental Affairs (EEA). The project transformed how Massachusetts residents, contractors, and businesses find environmental permits by creating an AI-driven chatbot that uses Retrieval-Augmented Generation (RAG) to provide accurate, contextual guidance through <strong>400+ permit types</strong> and <strong>1,200+ supporting documents</strong>.
                     </p>
                     <p>
-                      The solution addressed EEA's fragmented, text-heavy permit system that generated 35-40 daily navigation-related support tickets, creating high frustration for users and consuming thousands of staff hours annually. I presented the final project to Governor Maura Healey and Commonwealth officials, demonstrating its potential to save ~5,000 staff hours annually while improving public accessibility to government services.
+                      The solution addressed EEA's fragmented, text-heavy permit system that generated <strong>35-40 daily navigation-related support tickets</strong>, creating high frustration for users and consuming thousands of staff hours annually. I <strong>presented the final project to Governor Maura Healey</strong> and Commonwealth officials, demonstrating its potential to save <strong>~5,000 staff hours annually</strong> while improving public accessibility to government services.
                     </p>
                   </div>
                 </section>
@@ -139,7 +139,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                         <li><strong>Presented to Governor Maura Healey</strong> and Commonwealth officials showcasing project outcomes</li>
                         <li>Led cross-agency collaboration with EEA leadership, IT teams, and support staff</li>
                         <li>Conducted user acceptance testing and iterative feedback integration</li>
-                        <li>Delivered comprehensive Implementation & Handoff Guide with cost analysis (~$658/month operational cost)</li>
+                        <li>Delivered comprehensive Implementation & Handoff Guide with detailed cost analysis</li>
                       </ul>
                     </div>
                   </div>
