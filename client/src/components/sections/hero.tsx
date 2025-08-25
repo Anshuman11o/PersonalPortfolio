@@ -48,8 +48,7 @@ export default function Hero() {
             <Button 
               asChild 
               size="lg"
-              variant="outline" 
-              className="border-primary text-primary hover:bg-primary/10"
+              className="bg-gradient-to-r from-primary to-accent-gold hover:opacity-90"
             >
               <Link href="/experience">
                 View My Experience
