@@ -19,7 +19,7 @@ export default function Hero() {
           className="mb-6"
         >
           <img
-            src="/test-can-we-see-this.jpeg"
+            src="/test-working-image.png"
             alt="Anshuman Agarwal"
             className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-accent-gold/30 shadow-lg mx-auto"
           />
