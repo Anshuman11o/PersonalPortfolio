@@ -102,34 +102,44 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      As a Summer Intern with the Commonwealth of Massachusetts Executive Office of Energy and Environmental Affairs (EEA), I collaborated on developing an AI-powered chatbot for the agency's public website. This project successfully aimed to reduce support staff query load by more than 70% by providing automated assistance to citizens navigating permit application processes and environmental regulations.
+                      As part of the AI for the Commonwealth (AI4CW) Cohort 3 program, I developed a scalable AI-powered Permit Navigator Chatbot for the Massachusetts Executive Office of Energy and Environmental Affairs (EEA). The project transformed how Massachusetts residents, contractors, and businesses find environmental permits by creating an AI-driven chatbot that uses Retrieval-Augmented Generation (RAG) to provide accurate, contextual guidance through 400+ permit types and 1,200+ supporting documents.
+                    </p>
+                    <p>
+                      The solution addressed EEA's fragmented, text-heavy permit system that generated 35-40 daily navigation-related support tickets, creating high frustration for users and consuming thousands of staff hours annually. I presented the final project to Governor Maura Healey and Commonwealth officials, demonstrating its potential to save ~5,000 staff hours annually while improving public accessibility to government services.
                     </p>
                   </div>
                 </section>
 
                 {/* Key Achievements Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
+                  <h3 className="text-2xl font-semibold">Key Achievements & Impact</h3>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">AI Chatbot Development:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Quantified Impact & KPIs:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Developed an AI-powered RAG (Retrieval Augmented Generation) chatbot to automate citizen support services.</li>
-                        <li>Designed the system to reduce support staff query load by more than 70% through intelligent automation.</li>
+                        <li><strong>Potential 20%+ reduction</strong> in navigation-related support tickets (~5,000 staff hours saved annually)</li>
+                        <li><strong>25% improvement</strong> in average permit discovery time for end users</li>
+                        <li><strong>40%+ self-navigation success rate</strong> achieved in pilot testing</li>
+                        <li><strong>35-40 daily baseline tickets</strong> before implementation, targeting significant volume reduction</li>
+                        <li><strong>≥70% user satisfaction score</strong> target for pilot deployment</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">AWS Implementation:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Technical Implementation:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Built the chatbot infrastructure on AWS cloud services for scalability and reliability.</li>
-                        <li>Implemented tailored information retrieval based on specific permit types and user requirements.</li>
+                        <li>Built fully serverless, cloud-native architecture supporting 400+ permit types and 1,200+ documents</li>
+                        <li>Developed autonomous data pipeline with web scraping, metadata filtering, and intelligent indexing</li>
+                        <li>Created Next.js chatbot widget with WCAG-compliant accessibility design</li>
+                        <li>Implemented RAG optimization with query funneling and conversational guidance</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Public Service Enhancement:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Leadership & Collaboration:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Focused on improving citizen experience with permit application processes and environmental compliance.</li>
-                        <li>Worked directly with government agency stakeholders to understand and address real-world public service challenges.</li>
+                        <li><strong>Presented to Governor Maura Healey</strong> and Commonwealth officials showcasing project outcomes</li>
+                        <li>Led cross-agency collaboration with EEA leadership, IT teams, and support staff</li>
+                        <li>Conducted user acceptance testing and iterative feedback integration</li>
+                        <li>Delivered comprehensive Implementation & Handoff Guide with cost analysis (~$658/month operational cost)</li>
                       </ul>
                     </div>
                   </div>
@@ -137,59 +147,57 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
 
                 {/* Skills & Technologies Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <h3 className="text-2xl font-semibold">Technical Skills & Architecture</h3>
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-xl font-semibold mb-2">AI & Machine Learning:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Retrieval-Augmented Generation (RAG) pipelines with AWS Bedrock</li>
-                        <li>Vector embeddings & semantic search</li>
-                        <li>Anthropic Claude 3.7 Sonnet via Bedrock (prompt engineering, query "funneling")</li>
-                        <li>Natural Language Processing</li>
-                        <li>Text chunking & summarization (NLTK)</li>
-                        <li>Keyword extraction & tagging</li>
-                        <li>OCR integration (Tesseract) for PDF/text ingestion</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2">Web Scraping & Data Ingestion:</h4>
-                      <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Python (BeautifulSoup) for static HTML</li>
-                        <li>Firecrawl API for JavaScript-rendered pages</li>
-                        <li>Document processing (PyPDF2, python-docx, OpenCV preprocessing)</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2">Indexing & Search:</h4>
-                      <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>AWS Bedrock Knowledge Base (document ingestion, chunking, embedding)</li>
-                        <li>AWS OpenSearch (full-text + vector search + analytics)</li>
+                        <li>Retrieval-Augmented Generation (RAG) pipelines with AWS Bedrock Knowledge Base</li>
+                        <li>Anthropic Claude 3.7 Sonnet via Bedrock with advanced prompt engineering</li>
+                        <li>Vector embeddings & semantic search with OpenSearch</li>
+                        <li>Query funneling and conversational flow optimization</li>
+                        <li>Metadata schema validation and intelligent document indexing</li>
+                        <li>Natural Language Processing for permit categorization</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Cloud Infrastructure & DevOps:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>AWS S3 (versioned buckets, lifecycle policies)</li>
-                        <li>Serverless & container orchestration</li>
-                        <li>AWS Lambda & Step Functions for ETL workflows</li>
-                        <li>Docker + AWS Fargate/ECS for scalable microservices</li>
+                        <li>AWS Lambda & Step Functions for serverless orchestration</li>
+                        <li>AWS S3 for versioned storage with lifecycle policies</li>
+                        <li>AWS Amplify for CI/CD deployment and hosting</li>
                         <li>Infrastructure-as-Code with AWS CloudFormation</li>
-                        <li>Security & networking (IAM roles/policies, PrivateLink, VPC, OAuth 2.0/JWT)</li>
+                        <li>Docker containerization for Lambda deployments</li>
+                        <li>Security: IAM role-based access, CORS restrictions, environment variable management</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Chat Interface & Frontend:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Frontend & User Experience:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>AWS Lex slot-based dialogs on mass.gov</li>
-                        <li>Streamlit-based Admin Dashboard (usage metrics, CSAT surveys, system health)</li>
-                        <li>WCAG-compliant, responsive UI</li>
+                        <li>Next.js chatbot widget with WCAG accessibility compliance</li>
+                        <li>TypeScript for type-safe development</li>
+                        <li>Admin dashboard for real-time pipeline control and analytics</li>
+                        <li>Human-Centered Design (HCD) methodology implementation</li>
+                        <li>Responsive design for multi-device accessibility</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Monitoring & Observability:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Data Processing & Integration:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>AWS CloudWatch & CloudTrail (query metrics, error rates, guardrail triggers)</li>
-                        <li>Real-time dashboards and alerting</li>
+                        <li>Python web scraping with BeautifulSoup (static content)</li>
+                        <li>Firecrawl API integration for dynamic JavaScript-rendered pages</li>
+                        <li>Autonomous data pipeline for crawling 1,200+ Mass.gov documents</li>
+                        <li>Metadata filtering and document categorization</li>
+                        <li>AWS OpenSearch for full-text and vector search capabilities</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Monitoring & Analytics:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>AWS CloudWatch & CloudTrail for comprehensive logging</li>
+                        <li>Real-time dashboards for usage metrics and system health</li>
+                        <li>KPI tracking for user satisfaction and navigation success rates</li>
+                        <li>Cost analysis and operational efficiency monitoring</li>
                       </ul>
                     </div>
                   </div>
@@ -197,48 +205,51 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
 
                 {/* Soft Skills Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                  <h3 className="text-2xl font-semibold">Soft Skills & Work Environment Experience</h3>
+                  <h3 className="text-2xl font-semibold">Project Management & Professional Skills</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Government Collaboration:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Executive Leadership & Communication:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Partnered directly with EEA policy experts and agency officials</li>
-                        <li>Translated complex regulatory requirements into guided chatbot dialogs</li>
+                        <li>Presented final deliverables to Governor Maura Healey and Commonwealth leadership</li>
+                        <li>Led stakeholder presentations to EEA officials and AI COE reviewers</li>
+                        <li>Authored comprehensive technical documentation and non-technical summaries</li>
+                        <li>Delivered structured communication to accelerate cross-agency alignment</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Stakeholder Communication:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Government & Public Service Collaboration:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Led requirements analysis workshops</li>
-                        <li>Authored runbooks, architecture docs, and non-technical summaries</li>
+                        <li>Collaborated directly with EEA leadership, IT teams, and support staff</li>
+                        <li>Translated complex regulatory requirements into user-friendly conversational flows</li>
+                        <li>Balanced client needs with technical feasibility in government environment</li>
+                        <li>Participated in WCAG accessibility and government AI compliance workshops</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Public Impact Focus:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Agile Project Management:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Automated permit guidance to reduce support-ticket volume</li>
-                        <li>Measured and reported CSAT improvements and self-navigation success rates</li>
+                        <li>Managed 5-phase development lifecycle from problem definition to deployment</li>
+                        <li>Led requirements gathering workshops and user testing sessions</li>
+                        <li>Implemented iterative feedback loops to prevent scope drift</li>
+                        <li>Coordinated sprint planning and deliverable scheduling across phases</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Agile Development & Adaptability:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Impact Analysis & Strategic Thinking:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Operated in a hybrid Scrum environment with iterative sprints</li>
-                        <li>Rapidly adapted pipelines and schemas to evolving mass.gov content</li>
+                        <li>Conducted comprehensive cost-benefit analysis with operational projections</li>
+                        <li>Developed KPI framework for measuring public service improvement</li>
+                        <li>Created scalable architecture supporting multiple EEA sub-agencies</li>
+                        <li>Designed human-centered solutions addressing accessibility and equity concerns</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Cross-Functional Teamwork:</h4>
+                      <h4 className="text-xl font-semibold mb-2">Technical Leadership & Quality Assurance:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Coordinated across engineering, UX, and policy teams</li>
-                        <li>Enforced code quality, security best practices, and accessibility standards</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-semibold mb-2">Professional Growth & Problem Solving:</h4>
-                      <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Deepened expertise in cloud AI, ETL debugging, and production-grade deployments</li>
-                        <li>Implemented robust error handling, retry logic, and performance optimizations</li>
+                        <li>Enforced security best practices and compliance standards</li>
+                        <li>Conducted scenario-based testing with government stakeholders</li>
+                        <li>Implemented robust error handling and performance optimization strategies</li>
+                        <li>Delivered complete Implementation & Handoff Guide for operational transition</li>
                       </ul>
                     </div>
                   </div>
