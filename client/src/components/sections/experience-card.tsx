@@ -102,7 +102,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      As a Machine Learning Intern at IOMICS Corporation, I am developing scalable data pipelines for transforming clinical observational datasets into structured, analysis-ready formats for various machine learning models. My work focuses on <strong>propositionalization</strong>, building <strong>Extract, Transform, Load (ETL) pipelines</strong>, preprocessing workflows, schema configuration, and data quality reporting to support downstream Artificial Intelligence (AI) and research applications in the biotechnology sector.
+                      As a Machine Learning Intern at IOMICS Corporation, I developed scalable data pipelines for transforming clinical observational datasets into structured, analysis-ready formats for various machine learning models. My work focused on <strong>propositionalization</strong>, building <strong>Extract, Transform, Load (ETL) pipelines</strong>, preprocessing workflows, schema configuration, and data quality reporting to support downstream Artificial Intelligence (AI) and research applications in the biotechnology sector.
                     </p>
                     <p>
                       IOMICS Corporation specializes in applying advanced data science and machine learning techniques to biotechnology and clinical research, working with complex datasets that require sophisticated processing and transformation methodologies.
@@ -123,30 +123,32 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
 
                 {/* Current Focus & Achievements Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
-                  <h3 className="text-2xl font-semibold">Current Focus & Achievements</h3>
+                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
                   <div className="space-y-6">
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Data Pipeline Development:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Building scalable Extract, Transform, Load (ETL) pipelines using PySpark for large-scale clinical dataset processing</li>
-                        <li>Implementing data quality reporting systems to ensure accuracy and consistency in downstream applications</li>
-                        <li>Developing schema configuration workflows for standardizing diverse clinical observational data formats</li>
+                        <li>Built scalable Extract, Transform, Load (ETL) pipelines using PySpark for large-scale clinical dataset processing</li>
+                        <li>Implemented data quality reporting systems to ensure accuracy and consistency in downstream applications</li>
+                        <li>Developed schema configuration workflows for standardizing diverse clinical observational data formats</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Machine Learning Infrastructure:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Creating analysis-ready datasets optimized for various machine learning model architectures</li>
-                        <li>Implementing propositionalization techniques to convert relational data into flat feature representations</li>
-                        <li>Designing preprocessing workflows that maintain data integrity while optimizing for ML performance</li>
+                        <li>Created analysis-ready datasets optimized for various machine learning model architectures</li>
+                        <li>Implemented propositionalization techniques to convert relational data into flat feature representations</li>
+                        <li>Designed preprocessing workflows that maintain data integrity while optimizing for ML performance</li>
+                        <li>Evaluated Logical Neural Networks, PyTsetlin Machine and Active learning framework for high-dimensional omics transcriptomics, reporting on API usability, parameter handling, and data compatibility to validate architectural fit for interpretable feature selection and internal software usage</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Process Improvement & Documentation:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Enhancing documentation standards and testing protocols for data pipeline reliability</li>
-                        <li>Improving integration processes between data transformation stages and downstream AI applications</li>
-                        <li>Contributing to biotechnology research applications through robust data engineering practices</li>
+                        <li>Enhanced documentation standards and testing protocols for data pipeline reliability</li>
+                        <li>Improved integration processes between data transformation stages and downstream AI applications</li>
+                        <li>Contributed to biotechnology research applications through robust data engineering practices</li>
+                        <li>Conducted extensive code refactoring and code review on PyTsetlin Machine code to prepare it for internal usage and adoption</li>
                       </ul>
                     </div>
                   </div>
@@ -202,25 +204,25 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Biotechnology & Research Focus:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Gaining expertise in biotechnology applications of machine learning and data science</li>
-                        <li>Working with clinical observational datasets and research-grade data processing</li>
-                        <li>Understanding regulatory and quality standards in biotechnology data management</li>
+                        <li>Gained expertise in biotechnology applications of machine learning and data science</li>
+                        <li>Worked with clinical observational datasets and research-grade data processing</li>
+                        <li>Developed understanding of regulatory and quality standards in biotechnology data management</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Technical Leadership & Collaboration:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Contributing to cross-functional teams in hybrid work environment (Holyoke, MA)</li>
-                        <li>Developing scalable solutions that support multiple downstream research applications</li>
-                        <li>Implementing best practices for data engineering in scientific computing environments</li>
+                        <li>Contributed to cross-functional teams in hybrid work environment (Holyoke, MA)</li>
+                        <li>Developed scalable solutions that support multiple downstream research applications</li>
+                        <li>Implemented best practices for data engineering in scientific computing environments</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Continuous Learning & Innovation:</h4>
                       <ul className="list-disc list-inside space-y-1 ml-4">
-                        <li>Staying current with emerging technologies in distributed computing and data processing</li>
-                        <li>Applying academic machine learning knowledge to real-world biotechnology challenges</li>
-                        <li>Contributing to the advancement of AI applications in clinical and research settings</li>
+                        <li>Stayed current with emerging technologies in distributed computing and data processing</li>
+                        <li>Applied academic machine learning knowledge to real-world biotechnology challenges</li>
+                        <li>Contributed to the advancement of AI applications in clinical and research settings</li>
                       </ul>
                     </div>
                   </div>
@@ -393,7 +395,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      As a Member of the UMass Robotics Club, I contributed to the development and optimization of VR-based robotics telepresence using Meta Quest 3 and Unity. My role involved enhancing real-time robot control and data retrieval, ensuring low-latency performance, and improving human-robot interaction for the MassRobotics Form & Function Challenge, where we are building a humanoid robot designed to assist individuals with disabilities in performing physically demanding tasks.
+                      As a Member of the UMass Robotics Club, I contributed to the development and optimization of VR-based robotics telepresence using Meta Quest 3 and Unity. My role involved enhancing real-time robot control and data retrieval, ensuring low-latency performance, and improving human-robot interaction for the MassRobotics Form & Function Challenge, where we were building a humanoid robot designed to assist individuals with disabilities in performing physically demanding tasks.
                     </p>
                   </div>
                 </section>
@@ -419,7 +421,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Competition Participation & Humanitarian Focus:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Competing in the MassRobotics Form & Function Challenge, contributing to a humanoid robot that assists individuals with disabilities in performing physically strenuous tasks.</li>
+                        <li>Competed in the MassRobotics Form & Function Challenge, contributing to a humanoid robot that assisted individuals with disabilities in performing physically strenuous tasks.</li>
                         <li>Assisted in integrating Unity-based simulations with robotic hardware to create a meaningful human-robot interaction.</li>
                       </ul>
                     </div>
