@@ -4,6 +4,20 @@ import type { Project } from "@shared/schema";
 
 const PROJECTS: Project[] = [
   {
+    id: 5,
+    title: "Cybersecurity Coding Agent Harness",
+    description: "Built a harness for an AI agent to scan and patch 30+ OWASP vulnerability classes in a production web app in under 6 minutes, reaching 88% detection recall against 100 vulnerabilities in 1,000+ files. Benchmarked 10 AI models to find the best recall-per-dollar option, with results ranking GPT-5.6 Luna first on both metrics at 88.7% recall and a $4.37 run cost, beating open-source and self-hosted models like GLM. Raised harness detection recall from 60% to 88% with an autonomous agent loop that modifies the harness.",
+    githubUrl: "https://github.com/Anshuman11o/Cybersecurity-Coding-Agent-Harness",
+    imageUrl: "/cyber-harness-cover.png"
+  },
+  {
+    id: 6,
+    title: "Video Processing Mobile App",
+    description: "Built a React Native mobile app backed by a distributed system of stateless Go workers that captions video clips into adaptive-bitrate HTTP Live Streaming on a self-hosted SQLite queue for safe retries. Built a Kotlin WorkManager uploader that queues clips locally and drives multipart S3 uploads that survive app kills.",
+    githubUrl: "https://github.com/Anshuman11o/Video-Processing-Mobile-App",
+    imageUrl: "/captionclips-cover.png"
+  },
+  {
     id: 1,
     title: "WhatsApp Summarizer AI Agent",
     description: "Built an AI agent to generate insightful summaries from diverse media inputs, including PDFs, images, audio, videos, Excel, Word, and PPTs, reducing user's time in content comprehension by 10x. Designed with Python, Django, PyTorch to extract data, OpenAI API to analyze content and prepare format-specific summaries and Twilio API for seamless delivery to users.",

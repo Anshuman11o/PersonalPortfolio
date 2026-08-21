@@ -95,14 +95,131 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
           </DialogHeader>
 
           <div className="space-y-8 mt-6">
-            {experience.company === "IOMICS Corporation" ? (
+            {experience.company === "IOMICS Corporation" && experience.role === "Data Science Intern" ? (
               <>
                 {/* Role Overview Section */}
                 <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
                   <h3 className="text-2xl font-semibold">Role Overview</h3>
                   <div className="prose prose-lg max-w-none">
                     <p>
-                      As a Machine Learning Intern at IOMICS Corporation, I developed scalable data pipelines for transforming clinical observational datasets into structured, analysis-ready formats for various machine learning models. My work focused on <strong>propositionalization</strong>, building <strong>Extract, Transform, Load (ETL) pipelines</strong>, preprocessing workflows, schema configuration, and data quality reporting to support downstream Artificial Intelligence (AI) and research applications in the biotechnology sector.
+                      As a Data Science Intern at IOMICS Corporation, I built <strong>Python Extract, Transform, Load (ETL) scripts</strong> to transform raw omics data for <strong>33 TCGA cancer cohorts</strong> from the National Cancer Institute's <strong>Genomic Data Commons</strong> into structured, analysis-ready CSVs, <strong>improving downstream analysis time</strong>.
+                    </p>
+                    <p>
+                      The Cancer Genome Atlas (TCGA) publishes its cohorts as raw, inconsistently shaped omics files rather than as anything a model or an analyst can read directly. Every cohort has to be located, retrieved, parsed and reconciled against the others before a single comparison across cancer types is possible, and doing that by hand for each new question is the reason exploratory work in this space stalls. The scripts collapse that work into a repeatable step, so an analyst starts from a table rather than from an archive.
+                    </p>
+                    <p>
+                      IOMICS Corporation applies advanced data science and machine learning techniques to biotechnology and clinical research, working with complex datasets that require sophisticated processing and transformation methodologies.
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <strong>Company Website:</strong>
+                      <a
+                        href="https://iomics.ai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-gold hover:text-accent-gold/80 underline"
+                      >
+                        https://iomics.ai/
+                      </a>
+                    </p>
+                  </div>
+                </section>
+
+                {/* Key Achievements Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Key Achievements</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Multi-Cohort Omics ETL:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Built Python ETL scripts covering <strong>33 TCGA cancer cohorts</strong> retrieved from NCI's Genomic Data Commons</li>
+                        <li>Transformed raw, heterogeneous omics files into structured, <strong>analysis-ready CSVs</strong> with a consistent schema across cohorts</li>
+                        <li><strong>Improved downstream analysis time</strong> by removing the per-question retrieval and reshaping work that previously preceded every analysis</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Data Modeling & Schema Design:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Designed a tabular target schema that holds across cohorts, so cross-cancer comparison is a query rather than a data-wrangling project</li>
+                        <li>Reconciled inconsistent field naming, coding and file layout between cohorts into one normalized representation</li>
+                        <li>Produced outputs consumable directly by both research workflows and machine learning pipelines</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Reproducibility & Reuse:</h4>
+                      <ul className="list-disc list-inside space-y-2">
+                        <li>Wrote the transformation as repeatable scripts rather than one-off notebooks, so a refresh is a re-run</li>
+                        <li>Handled the public-archive retrieval path end to end, from source query through to the written CSV</li>
+                        <li>Built the pipeline so additional cohorts extend it rather than requiring new bespoke code</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Skills & Technologies Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Skills & Technologies</h3>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Data Engineering:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Python for Extract, Transform, Load (ETL) scripting</li>
+                        <li>Pandas for data manipulation, reshaping and normalization</li>
+                        <li>Schema design and data modeling for analytical workloads</li>
+                        <li>CSV and tabular output generation for downstream consumption</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Domain & Data Sources:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>The Cancer Genome Atlas (TCGA) cohort data</li>
+                        <li>National Cancer Institute Genomic Data Commons (GDC)</li>
+                        <li>Omics and genomics data structures</li>
+                        <li>Healthcare and regulated research data handling</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Engineering Practice:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Reproducible, re-runnable pipeline design</li>
+                        <li>Data quality validation across heterogeneous sources</li>
+                        <li>Documentation for internal reuse by research staff</li>
+                        <li>Version control and collaborative development with Git</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Professional Development & Environment */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Professional Development & Work Environment</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Biotechnology & Research Focus:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Worked directly with public cancer genomics data at cohort scale</li>
+                        <li>Learned how research questions in drug discovery translate into data requirements</li>
+                        <li>Developed an understanding of quality standards for research-grade data</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2">Collaboration:</h4>
+                      <ul className="list-disc list-inside space-y-1 ml-4">
+                        <li>Contributed to cross-functional teams in a hybrid work environment (Holyoke, MA)</li>
+                        <li>Delivered datasets consumed by other engineers and researchers on the team</li>
+                        <li>Iterated on output format based on how downstream users actually needed to query it</li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </>
+            ) : experience.company === "IOMICS Corporation" ? (
+              <>
+                {/* Role Overview Section */}
+                <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
+                  <h3 className="text-2xl font-semibold">Role Overview</h3>
+                  <div className="prose prose-lg max-w-none">
+                    <p>
+                      As a Machine Learning Engineering Intern at IOMICS Corporation, I built <strong>Extract, Transform, Load (ETL) pipelines</strong> with <strong>PySpark and Python</strong> to process <strong>90 million Electronic Health Record (EHR) rows</strong> into structured, analysis-ready formats, focusing on <strong>preprocessing and propositionalization</strong> for AI models. Alongside the pipeline work I evaluated interpretable machine learning libraries for real-world omics data and prepared one of them for internal adoption.
                     </p>
                     <p>
                       IOMICS Corporation specializes in applying advanced data science and machine learning techniques to biotechnology and clinical research, working with complex datasets that require sophisticated processing and transformation methodologies.
@@ -128,7 +245,8 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Data Pipeline Development:</h4>
                       <ul className="list-disc list-inside space-y-2">
-                        <li>Built scalable Extract, Transform, Load (ETL) pipelines using PySpark for large-scale clinical dataset processing</li>
+                        <li>Built Extract, Transform, Load (ETL) pipelines with <strong>PySpark and Python</strong> to process <strong>90 million EHR rows</strong> into structured, analysis-ready formats</li>
+                        <li>Focused on <strong>preprocessing and propositionalization</strong> so the resulting data could be consumed directly by AI models</li>
                         <li>Implemented data quality reporting systems to ensure accuracy and consistency in downstream applications</li>
                         <li>Developed schema configuration workflows for standardizing diverse clinical observational data formats</li>
                       </ul>
@@ -139,7 +257,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                         <li>Created analysis-ready datasets optimized for various machine learning model architectures</li>
                         <li>Implemented propositionalization techniques to convert relational data into flat feature representations</li>
                         <li>Designed preprocessing workflows that maintain data integrity while optimizing for ML performance</li>
-                        <li>Evaluated Logical Neural Networks, PyTsetlin Machine and Active learning framework for high-dimensional omics transcriptomics, reporting on API usability, parameter handling, and data compatibility to validate architectural fit for interpretable feature selection and internal software usage</li>
+                        <li>Evaluated <strong>Logical Neural Networks and PyTsetlin</strong> for omics, reporting on API usability, parameter handling and data compatibility to validate fit for <strong>interpretable feature selection on real-world omic data for drug discovery</strong></li>
                       </ul>
                     </div>
                     <div>
@@ -148,7 +266,7 @@ export default function ExperienceCard({ experience, index }: ExperienceCardProp
                         <li>Enhanced documentation standards and testing protocols for data pipeline reliability</li>
                         <li>Improved integration processes between data transformation stages and downstream AI applications</li>
                         <li>Contributed to biotechnology research applications through robust data engineering practices</li>
-                        <li>Conducted extensive code refactoring and code review on PyTsetlin Machine code to prepare it for internal usage and adoption</li>
+                        <li>Conducted extensive <strong>code refactoring and code review</strong> on the PyTsetlin Machine codebase to prepare it for internal usage and software adoption</li>
                       </ul>
                     </div>
                   </div>

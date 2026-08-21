@@ -98,7 +98,31 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Overview</h3>
               <div className="prose prose-lg max-w-none">
-                {project.title === "Movie Recommender System" ? (
+                {project.title === "Cybersecurity Coding Agent Harness" ? (
+                  <>
+                    <p>
+                      Built a harness for an AI agent to scan and patch <strong>30+ OWASP vulnerability classes</strong> in a production web app in under <strong>6 minutes</strong>, reaching <strong>88% detection recall</strong> against <strong>100 vulnerabilities</strong> in <strong>1,000+ files</strong>. The costliest breaches of recent years — Log4Shell, the MOVEit SQL injection, the XZ Utils backdoor — all began with a defect sitting in source code that had already passed review, and the classes that dominate real incident reports are precisely the ones no static rule can describe, because the bug is something <em>absent</em>: a check that was never written, a parameter nobody thought to distrust.
+                    </p>
+                    <p>
+                      Conventional tooling splits that work and drops the middle. SAST only matches what someone already knew to write a rule for; DAST proves exploitability but points at a URL rather than a line. This harness takes the approach that targets the gap directly: decompose a repository into bounded units of work, reason over each one with a language model, and emit located, classified, evidence-backed findings. The engineering problem is that reasoning is expensive and non-deterministic, so the entire design is about making an agent's work <strong>bounded, auditable and reproducible</strong> rather than letting it roam a repository on an unbounded budget.
+                    </p>
+                    <p>
+                      I then benchmarked <strong>10 AI models</strong> on an identical corpus and scorer, varying only the model, to select the best recall-per-dollar production default. GPT-5.6 Luna ranked first on both metrics at <strong>88.7% recall</strong> and a <strong>$4.37</strong> run cost, beating open-source and self-hosted models like GLM. Finally, an autonomous agent loop worked against a defined recall goal — modifying the harness, verifying each change with dedicated scoring tools and adopting only confirmed improvements — raising detection recall from <strong>60% to 88%</strong>.
+                    </p>
+                  </>
+                ) : project.title === "Video Processing Mobile App" ? (
+                  <>
+                    <p>
+                      Built a React Native mobile app backed by a <strong>distributed system of stateless Go workers</strong> that captions video clips into <strong>adaptive-bitrate HTTP Live Streaming</strong>, running on a self-hosted SQLite queue for safe retries. Pick a video on your phone and get back a captioned stream with a three-rung resolution ladder the player switches between on the fly.
+                    </p>
+                    <p>
+                      Uploading video from a mobile device fails in two ways, and each makes the other harder to solve. Networks are unreliable and video files are large, so a single-request upload that fails at 90 percent restarts from zero. Processing on-device is impractical, because adaptive-bitrate streaming means encoding the same clip at three resolutions plus speech-to-text against a model of several hundred megabytes — minutes of sustained CPU on hardware the user is holding, on platforms that strictly limit what an app may do once it leaves the foreground.
+                    </p>
+                    <p>
+                      The solution separates the work at the boundary where the guarantees differ. On the device, a <strong>Kotlin WorkManager uploader</strong> queues clips locally and drives multipart S3 uploads that <strong>survive app kills</strong>: the clip is divided into 5 MiB parts, each recorded to a local ledger as it lands, with the transfer owned by the operating system's scheduler rather than the app process. On the backend, every stage is restartable — messages carry pointers rather than payloads, the database holds the only authoritative state, and each stage checks whether its own output already exists before doing any work.
+                    </p>
+                  </>
+                ) : project.title === "Movie Recommender System" ? (
                   <>
                     <p>
                       Developed a content-based movie recommender system using cosine similarity and the TMDB API in Python. The project involved processing movie datasets using Jupyter Notebook, where fields were formatted, unwanted attributes were discarded, and relevant features such as actors, directors, genres, and release dates were combined into a unified tags field. A cosine similarity index generator was implemented to recommend movies based on these tags.
@@ -138,6 +162,32 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Key Features</h3>
               <ul className="list-disc list-inside space-y-2">
+                {project.title === "Cybersecurity Coding Agent Harness" && (
+                  <>
+                    <li>Scans 1,000+ files for 30+ OWASP vulnerability classes in under 6 minutes, at 88% detection recall against 100 vulnerabilities</li>
+                    <li>Four-stage pipeline where each stage writes an artifact the next one reads, so any stage can be re-run, inspected, scored or replaced on its own</li>
+                    <li>Bounded reasoning: only two of the four stages call a model, keeping the expensive, non-deterministic work confined to exactly two places</li>
+                    <li>Evidence-backed findings — every finding carries a vulnerability class, a confidence score and a line-level trace from entry point to sink</li>
+                    <li>Provable coverage: one lane per file, with hunt plus skip required to equal the full inventory, so nothing disappears silently</li>
+                    <li>Per-lane budget ceilings projected before the run, so one pathological file cannot consume the budget for everything after it</li>
+                    <li>Multi-model benchmark of 10 AI models on an identical corpus and scorer, selecting the best recall-per-dollar production default</li>
+                    <li>Autonomous agent loop that modifies the harness, scores each change and adopts only confirmed improvements, lifting recall from 60% to 88%</li>
+                    <li>Scored blind — neither the harness nor any agent that wrote its code has ever had access to the answer key</li>
+                  </>
+                )}
+                {project.title === "Video Processing Mobile App" && (
+                  <>
+                    <li>Byte-exact upload resume across app kill, process death and network loss</li>
+                    <li>Direct-to-S3 transfer using presigned URLs — video bytes never pass through the API, so one small API process serves uploads of any size</li>
+                    <li>Four-stage processing pipeline (validate, extract, transcribe, package) with per-stage state and failure isolation</li>
+                    <li>Pluggable queue: a self-hosted SQLite broker implementing visibility timeouts, delivery counts and dead-lettering in a single file with no server, plus Amazon SQS behind the same interface</li>
+                    <li>Adaptive-bitrate HLS with a three-rung resolution ladder and a selectable caption track</li>
+                    <li>Speech-to-text via whisper.cpp, with a mock mode for fast iteration</li>
+                    <li>Idempotent by construction — every stage is safe to run twice, checking for its own output before doing any work</li>
+                    <li>Survives a worker being killed mid-stage without losing or duplicating work, and dead-letters a poisoned clip after a bounded number of attempts</li>
+                    <li>Parallel uploads and processing across clips, with live per-job progress: current stage, per-stage timings and megabytes landed</li>
+                  </>
+                )}
                 {project.title === "Movie Recommender System" && (
                   <>
                     <li>Content-based filtering with cosine similarity</li>
@@ -183,6 +233,66 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             {/* Project Gallery Section */}
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
+              {project.title === "Cybersecurity Coding Agent Harness" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
+                    onClick={(e) => handleImageClick("/cyber-harness-pipeline.png", e)}
+                  >
+                    <img
+                      src="/cyber-harness-pipeline.png"
+                      alt="Four-stage scanner pipeline: recon, lane selector, budget governor and hunt lanes"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
+                    onClick={(e) => handleImageClick("/cyber-harness-results.png", e)}
+                  >
+                    <img
+                      src="/cyber-harness-results.png"
+                      alt="Detection recall raised from 60% to 88%, and the recall-per-dollar benchmark result"
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+              )}
+              {project.title === "Video Processing Mobile App" && (
+                <div className="space-y-4">
+                  <div className="rounded-lg overflow-hidden border border-accent-gold/10 bg-black">
+                    <video
+                      src="/videos/captionclips-demo.mp4"
+                      poster="/captionclips-cover.png"
+                      controls
+                      playsInline
+                      preload="none"
+                      className="w-full max-h-[70vh] object-contain"
+                      onClick={(e) => e.stopPropagation()}
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Two raw clips selected, uploaded in parallel, processed through the pipeline with live metrics, and played back with generated captions and selectable resolutions.
+                  </p>
+                  <div className="grid grid-cols-3 gap-4">
+                    {[
+                      ["/captionclips-1-home.png", "CaptionClips home screen"],
+                      ["/captionclips-2-upload.png", "Selected clips ready to upload"],
+                      ["/captionclips-3-jobs.png", "Job list with per-stage progress"],
+                      ["/captionclips-4-pipeline.png", "Job detail: pipeline stages and multipart upload progress"],
+                      ["/captionclips-5-completed.png", "Completed job with total elapsed time and per-stage timings"],
+                      ["/captionclips-6-ladder.png", "Playback with generated captions and the adaptive-bitrate resolution ladder"],
+                    ].map(([src, alt]) => (
+                      <div
+                        key={src}
+                        className="aspect-[9/16] bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                        onClick={(e) => handleImageClick(src, e)}
+                      >
+                        <img src={src} alt={alt} className="w-full h-full object-contain" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
               {project.title === "Movie Recommender System" && (
                 <div className="grid grid-cols-2 gap-4">
                   <div
@@ -335,7 +445,37 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Technical Details</h3>
               <div className="prose prose-lg max-w-none">
-                {project.title === "Movie Recommender System" ? (
+                {project.title === "Cybersecurity Coding Agent Harness" ? (
+                  <>
+                    <p>
+                      <strong>Stack:</strong> TypeScript, Python, Node.js, Anthropic Claude API, OWASP, JSON Schema, pytest and Git.
+                    </p>
+                    <p>
+                      <strong>Pipeline.</strong> Stage 0 (Recon) turns an unknown repository into a single JSON fact sheet — an AST pass extracts the route table including middleware and auto-generated CRUD endpoints, a diff compares the declared API spec against the routes that actually exist, and a frontend pass finds the escape hatches where markup bypasses sanitization. Stage 0.5 (Lane selector) cuts the codebase into bounded units of work, one lane per file, each carrying only the vulnerability classes recon's evidence associates with that file. Stage 1 (Budget governor) is pure arithmetic over the manifest and on-disk file sizes: how many calls, how many tokens, what that costs at the selected model's rate. Stage 2 (Hunt lanes) binds the model to exactly one file with its class playbooks and the architectural context, then runs an agent loop — a hunt turn followed by a trace-completion turn in the same conversation, stopping early when a turn adds nothing.
+                    </p>
+                    <p>
+                      <strong>Why it is built this way.</strong> Stages 0.5 and 1 are deterministic on purpose: lane assignment and cost projection have to be auditable without re-running a model, and they are the two places where non-determinism would make every downstream comparison meaningless. Findings are labelled against a class registry that maps onto OWASP codes, and a finding may carry more than one class, so hedging is tracked as its own number — meaning "score well by labelling everything" shows up as a metric rather than as recall.
+                    </p>
+                    <p>
+                      <strong>Measurement.</strong> Every run is scored by the same scorer against the same denominator, with the answer key held in a separate private repository the harness has never had access to. Model comparison holds corpus, prompts and lanes fixed and varies only the model, which is what makes the recall-per-dollar ranking mean anything.
+                    </p>
+                  </>
+                ) : project.title === "Video Processing Mobile App" ? (
+                  <>
+                    <p>
+                      <strong>Stack:</strong> Go, React Native, TypeScript, Kotlin, AWS (S3, DynamoDB), SQLite, FFmpeg and whisper.cpp.
+                    </p>
+                    <p>
+                      <strong>Architecture.</strong> Two Go binaries — an HTTP API that never touches video bytes, and a worker binary whose stage is selected by an environment variable. The phone talks straight to S3 using short-lived presigned URLs, so a single small API process serves uploads of any size; it only mints URLs and records facts. DynamoDB holds the job record with per-stage state and is the only source of truth. The queue is a table with a "hidden until" timestamp: claiming a message hides it rather than removing it, and it rejoins the visible set if its lease expires without an acknowledgement.
+                    </p>
+                    <p>
+                      <strong>Queue guarantees.</strong> Replacing a managed broker with a self-hosted one means visibility timeouts, delivery counts and redrive policies stop being configuration and become code that has to be correct. A claim is a single atomic <code>UPDATE ... RETURNING</code> statement, so mutual exclusion is delegated to the storage engine's transaction. Claims mint an opaque receipt token, so a worker that overruns its lease cannot destroy work another worker legitimately owns. Long stages heartbeat to extend their lease rather than holding a lock, because a lease expires on its own and a crashed lock-holder never releases. Delivery counts are incremented during the claim rather than on failure, so a worker that crashes hard without reporting still consumes retry budget.
+                    </p>
+                    <p>
+                      <strong>The hard part.</strong> At-least-once delivery makes "has this already run?" genuinely ambiguous: an output present with no recorded state can mean a duplicate delivery after a successful run, or a crash between writing the output and recording it. Those demand opposite responses and no single flag can tell them apart, which is why every stage consults both the object store and the job record, and why every stage was written to be safe to run twice rather than trying to guarantee it never would be.
+                    </p>
+                  </>
+                ) : project.title === "Movie Recommender System" ? (
                   <p>
                     Built with Python Jupyter for data processing, Streamlit for frontend development, and TMDB API integration for retrieving data sets and movie posters. Implemented vectorization and cosine similarity algorithms for movie matching. Used heroku and git for deployment.
                   </p>
