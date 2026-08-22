@@ -234,27 +234,46 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             <section className="space-y-4 p-6 rounded-lg border border-accent-gold/20 hover:border-accent-gold/40 transition-colors">
               <h3 className="text-2xl font-semibold">Project Gallery</h3>
               {project.title === "Cybersecurity Coding Agent Harness" && (
-                <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4">
                   <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
-                    onClick={(e) => handleImageClick("/cyber-harness-pipeline.png", e)}
+                    className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/cyber-harness-architecture.png", e)}
                   >
                     <img
-                      src="/cyber-harness-pipeline.png"
-                      alt="Four-stage scanner pipeline: recon, lane selector, budget governor and hunt lanes"
-                      className="w-full h-full object-contain"
+                      src="/cyber-harness-architecture.png"
+                      alt="Scanner pipeline architecture: an 865-file corpus flows through Stage 0 recon, Stage 0.5 lane selector, Stage 1 budget governor and the Stage 2 per-lane hunt loop, each writing a JSON artifact the next stage reads, ending in candidate-findings.json and a cost reconcile step"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
+                  <p className="text-sm text-muted-foreground">
+                    The full pipeline. Orange stages call a model, blue stages are deterministic TypeScript, and every arrow crosses a JSON artifact on disk rather than memory.
+                  </p>
                   <div
-                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity col-span-2"
+                    className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/cyber-harness-benchmark.png", e)}
+                  >
+                    <img
+                      src="/cyber-harness-benchmark.png"
+                      alt="Vulnerability scan recall by cost: GPT-5.6 Luna 88.7% at $4.37, GLM-5.2 85.6% at an estimated $7.33, Claude Sonnet 5 86.6% at $84.04, and Gemini 3.6 Flash 75.3% at $24.85, plotted against a log cost scale"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Recall against run cost on a log scale. Holding the corpus, prompts and scorer fixed and varying only the model is what makes the recall-per-dollar ranking meaningful.
+                  </p>
+                  <div
+                    className="aspect-video bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                     onClick={(e) => handleImageClick("/cyber-harness-results.png", e)}
                   >
                     <img
                       src="/cyber-harness-results.png"
-                      alt="Detection recall raised from 60% to 88%, and the recall-per-dollar benchmark result"
+                      alt="Detection recall raised from 60% to 88% by an autonomous agent loop that modifies the harness, verifies each change with scoring tools, and adopts only confirmed improvements"
                       className="w-full h-full object-contain"
                     />
                   </div>
+                  <p className="text-sm text-muted-foreground">
+                    The self-improvement loop. Each change is scored before it is kept, so the gain is measured rather than assumed.
+                  </p>
                 </div>
               )}
               {project.title === "Video Processing Mobile App" && (
