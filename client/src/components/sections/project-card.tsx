@@ -122,6 +122,18 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       The solution separates the work at the boundary where the guarantees differ. On the device, a <strong>Kotlin WorkManager uploader</strong> queues clips locally and drives multipart S3 uploads that <strong>survive app kills</strong>: the clip is divided into 5 MiB parts, each recorded to a local ledger as it lands, with the transfer owned by the operating system's scheduler rather than the app process. On the backend, every stage is restartable — messages carry pointers rather than payloads, the database holds the only authoritative state, and each stage checks whether its own output already exists before doing any work.
                     </p>
                   </>
+                ) : project.title === "World Wide News" ? (
+                  <>
+                    <p>
+                      Built an <strong>interactive D3.js globe</strong> in React, Vite and Figma surfacing <strong>100+ news domains per country</strong> with translingual coverage in <strong>65+ languages</strong>. Click any country and you get the top five stories its own local press is running, across <strong>195 countries</strong>, refreshed every <strong>15 minutes</strong> on GDELT's own update cadence.
+                    </p>
+                    <p>
+                      Most international coverage reaches a reader after passing through an outlet in their own country, which decides what is worth relaying and how to frame it. The premise here is that the most accurate picture of a country's situation comes from what that country is publishing for itself &mdash; so the platform never editorialises. Every article links straight to its source, and the ranking that put it on screen is exposed rather than hidden.
+                    </p>
+                    <p>
+                      The ranking is a <strong>relevance-scoring algorithm over three weighted signals</strong> &mdash; intensity, richness and locality &mdash; computed over a Python, FastAPI and PostgreSQL pipeline on GDELT's Global Knowledge Graph. The weights are not fixed: three sliders in the side panel let the reader retune them live, and the country's top five is rescored on the spot. Someone hunting for high-emotion coverage and someone hunting for the most locally-grounded reporting get different, defensible answers from the same data.
+                    </p>
+                  </>
                 ) : project.title === "Movie Recommender System" ? (
                   <>
                     <p>
@@ -186,6 +198,19 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <li>Idempotent by construction — every stage is safe to run twice, checking for its own output before doing any work</li>
                     <li>Survives a worker being killed mid-stage without losing or duplicating work, and dead-letters a poisoned clip after a bounded number of attempts</li>
                     <li>Parallel uploads and processing across clips, with live per-job progress: current stage, per-stage timings and megabytes landed</li>
+                  </>
+                )}
+                {project.title === "World Wide News" && (
+                  <>
+                    <li>Interactive D3.js globe — drag to rotate, scroll to zoom, click a country to fly to it and load its news</li>
+                    <li>Top 5 local stories per country across 195 countries, sourced from 100+ news domains each</li>
+                    <li>Translingual coverage in 65+ languages, so a country's press is read in the language it publishes in</li>
+                    <li>Three live relevance sliders — intensity, richness and locality — that rescore the country's top 5 on the spot</li>
+                    <li>Theme diversity enforced in the top 3 slots, so the ranking cannot return five versions of one story</li>
+                    <li>Every article links directly to its source, with the publisher named on the card</li>
+                    <li>Scoring methodology published in-app on a dedicated Scoring page rather than kept opaque</li>
+                    <li>Refreshed every 15 minutes against GDELT 2.0, with an optional local CSV cache for offline replay</li>
+                    <li>Headline fallback chain that recovers a readable title from the article URL when the page supplies none</li>
                   </>
                 )}
                 {project.title === "Movie Recommender System" && (
@@ -310,6 +335,23 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
+              {project.title === "World Wide News" && (
+                <div className="space-y-4">
+                  <div
+                    className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/worldwidenews-architecture.png", e)}
+                  >
+                    <img
+                      src="/worldwidenews-architecture.png"
+                      alt="High-level architecture: GDELT 2.0 and an optional local CSV cache feed a FastAPI backend, which writes raw_articles, country_articles, top5_cache and country_status in PostgreSQL and serves a Vite and React frontend of a D3 globe and side panel"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Five tiers, ingestion through browser. Scoring happens on the way in, not on the way out, so a globe click is one indexed lookup against the precomputed top-5 cache rather than a scoring pass.
+                  </p>
                 </div>
               )}
               {project.title === "Movie Recommender System" && (
@@ -492,6 +534,24 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     </p>
                     <p>
                       <strong>The hard part.</strong> At-least-once delivery makes "has this already run?" genuinely ambiguous: an output present with no recorded state can mean a duplicate delivery after a successful run, or a crash between writing the output and recording it. Those demand opposite responses and no single flag can tell them apart, which is why every stage consults both the object store and the job record, and why every stage was written to be safe to run twice rather than trying to guarantee it never would be.
+                    </p>
+                  </>
+                ) : project.title === "World Wide News" ? (
+                  <>
+                    <p>
+                      <strong>Stack:</strong> Python, FastAPI, PostgreSQL, Pandas, React, Vite, D3.js, the GDELT 2.0 API, Figma and Git.
+                    </p>
+                    <p>
+                      <strong>Ingest.</strong> GDELT publishes a new Global Knowledge Graph batch every 15 minutes. The backend pulls that batch over httpx, parses the GKG column set with Pandas, and resolves each article's publisher domain to a country through a mappings table. A cached-CSV mode replays a downloaded batch from disk instead, which keeps development off the live feed &mdash; the full pull is expensive and rerunning it on every restart is the kind of thing that quietly costs an afternoon.
+                    </p>
+                    <p>
+                      <strong>Scoring.</strong> Three signals, each min-max normalised across the country's article set so no one signal's raw range dominates. <em>Intensity</em> combines tone magnitude and polarity strength. <em>Richness</em> counts the themes and named people GDELT extracted, as a proxy for how substantive a piece is. <em>Locality</em> is the ratio of source-country location mentions to total location mentions &mdash; how much of the article is about where it was published. They combine at default weights of 0.40, 0.30 and 0.30, and any weight the caller omits falls back to its own default rather than the whole set resetting.
+                    </p>
+                    <p>
+                      <strong>Why the top 5 is not just the top 5 by score.</strong> Ranking purely on score returns five articles about whatever the country's dominant story is that hour. Slots 1&ndash;3 therefore enforce theme diversity &mdash; each must lead with a different primary theme &mdash; and slots 4&ndash;5 fill by score. The result reads as a picture of the country rather than a pile of one event.
+                    </p>
+                    <p>
+                      <strong>Serving.</strong> Postgres holds <code>raw_articles</code>, <code>country_articles</code>, a precomputed <code>top5_cache</code> and <code>country_status</code>, indexed by country code. Reads hit the cache, so a globe click is one indexed lookup rather than a scoring pass. Moving a slider posts new weights, rescores just that country asynchronously through a psycopg pool, and replaces its cache rows &mdash; reusing the headline for any URL that survived the reshuffle so the list does not visibly flicker. When an article carries no usable page title, a fallback chain recovers one from the URL slug, then from the lead person and theme, before settling for a generic label.
                     </p>
                   </>
                 ) : project.title === "Movie Recommender System" ? (

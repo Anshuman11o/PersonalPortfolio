@@ -25,6 +25,13 @@ const PROJECTS: Project[] = [
     imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
   },
   {
+    id: 7,
+    title: "World Wide News",
+    description: "Built an interactive D3.js globe in React, Vite and Figma surfacing 100+ news domains per country with translingual coverage in 65+ languages. Designed a relevance-scoring algorithm on intensity, richness and locality over a Python, FastAPI and PostgreSQL pipeline on GDELT data, producing a user-tunable top-5 of local news per country across 195 countries, refreshed every 15 minutes.",
+    githubUrl: "https://github.com/Anshuman11o/World-Wide-News-Platform",
+    imageUrl: "/worldwidenews-cover.png"
+  },
+  {
     id: 2,
     title: "Movie Recommender System",
     description: "Built a movie recommender web app using Python Jupyter and TMDB database. Implemented content-based filtering with cosine similarity to suggest top 5 similar movies. Features include popular and highly-rated movie recommendations. Deployed on Heroku with Streamlit frontend, offering an intuitive user interface for movie discovery.",
