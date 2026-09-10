@@ -6,7 +6,7 @@ const PROJECTS: Project[] = [
   {
     id: 5,
     title: "Cybersecurity Coding Agent Harness",
-    description: "Built a harness for an AI agent to scan and patch 30+ OWASP vulnerability classes in a production web app in under 6 minutes, reaching 88% detection recall against 100 vulnerabilities in 1,000+ files. Benchmarked 10 AI models to find the best recall-per-dollar option, with results ranking GPT-5.6 Luna first on both metrics at 88.7% recall and a $4.37 run cost, beating open-source and self-hosted models like GLM. Raised harness detection recall from 60% to 88% with an autonomous agent loop that modifies the harness.",
+    description: "Built a harness for an AI agent to scan and patch 30+ OWASP vulnerability classes in a production web app in under 6 minutes, reaching 88% detection recall against 100 vulnerabilities in 1,000+ files. Benchmarked 10 AI models to find the best recall-per-dollar option, with results ranking GPT-5.6 Luna first on both metrics at 88.7% recall and a $4.37 run cost, beating open-source and self-hosted models like GLM. Raised harness detection recall from 38% to 88% with an autonomous agent loop that modifies the harness.",
     githubUrl: "https://github.com/Anshuman11o/Cybersecurity-Coding-Agent-Harness",
     imageUrl: "/cyber-harness-cover.png"
   },

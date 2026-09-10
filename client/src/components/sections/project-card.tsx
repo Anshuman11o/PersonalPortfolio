@@ -107,7 +107,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                       Conventional tooling splits that work and drops the middle. SAST only matches what someone already knew to write a rule for; DAST proves exploitability but points at a URL rather than a line. This harness takes the approach that targets the gap directly: decompose a repository into bounded units of work, reason over each one with a language model, and emit located, classified, evidence-backed findings. The engineering problem is that reasoning is expensive and non-deterministic, so the entire design is about making an agent's work <strong>bounded, auditable and reproducible</strong> rather than letting it roam a repository on an unbounded budget.
                     </p>
                     <p>
-                      I then benchmarked <strong>10 AI models</strong> on an identical corpus and scorer, varying only the model, to select the best recall-per-dollar production default. GPT-5.6 Luna ranked first on both metrics at <strong>88.7% recall</strong> and a <strong>$4.37</strong> run cost, beating open-source and self-hosted models like GLM. Finally, an autonomous agent loop worked against a defined recall goal — modifying the harness, verifying each change with dedicated scoring tools and adopting only confirmed improvements — raising detection recall from <strong>60% to 88%</strong>.
+                      I then benchmarked <strong>10 AI models</strong> on an identical corpus and scorer, varying only the model, to select the best recall-per-dollar production default. GPT-5.6 Luna ranked first on both metrics at <strong>88.7% recall</strong> and a <strong>$4.37</strong> run cost, beating open-source and self-hosted models like GLM. Finally, an autonomous agent loop worked against a defined recall goal — modifying the harness, verifying each change with dedicated scoring tools and adopting only confirmed improvements — raising detection recall from <strong>38% to 88%</strong>.
                     </p>
                   </>
                 ) : project.title === "Video Processing Mobile App" ? (
@@ -183,7 +183,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                     <li>Provable coverage: one lane per file, with hunt plus skip required to equal the full inventory, so nothing disappears silently</li>
                     <li>Per-lane budget ceilings projected before the run, so one pathological file cannot consume the budget for everything after it</li>
                     <li>Multi-model benchmark of 10 AI models on an identical corpus and scorer, selecting the best recall-per-dollar production default</li>
-                    <li>Autonomous agent loop that modifies the harness, scores each change and adopts only confirmed improvements, lifting recall from 60% to 88%</li>
+                    <li>Autonomous agent loop that modifies the harness, scores each change and adopts only confirmed improvements, lifting recall from 38% to 88%</li>
                     <li>Scored blind — neither the harness nor any agent that wrote its code has ever had access to the answer key</li>
                   </>
                 )}
@@ -292,7 +292,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   >
                     <img
                       src="/cyber-harness-results.png"
-                      alt="Detection recall raised from 60% to 88% by an autonomous agent loop that modifies the harness, verifies each change with scoring tools, and adopts only confirmed improvements"
+                      alt="Detection recall raised from 38% to 88% by an autonomous agent loop that modifies the harness, verifies each change with scoring tools, and adopts only confirmed improvements"
                       className="w-full h-full object-contain"
                     />
                   </div>
