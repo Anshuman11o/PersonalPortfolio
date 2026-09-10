@@ -341,6 +341,32 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                 <div className="space-y-4">
                   <div
                     className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/worldwidenews-2-globe.png", e)}
+                  >
+                    <img
+                      src="/worldwidenews-2-globe.png"
+                      alt="Globe view with the United States highlighted, its top five local stories listed on the left from chattanoogan.com, wwltv.com, abc7ny.com, houstonpress.com and washingtonmonthly.com, and the intensity, richness and locality sliders set to 75, 45 and 30 percent"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Globe view. Every country is clickable, and the three sliders below the list retune the ranking live — here intensity has been pushed to 75% and richness to 45%.
+                  </p>
+                  <div
+                    className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
+                    onClick={(e) => handleImageClick("/worldwidenews-1-country.png", e)}
+                  >
+                    <img
+                      src="/worldwidenews-1-country.png"
+                      alt="Zoomed country view of Singapore with its top five local stories from straitstimes.com and tamilmurasu.com.sg, two of them in Tamil, and the sliders at the default 40, 30 and 30 percent"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Clicking a country zooms to it and loads its own press. Singapore returns both straitstimes.com and Tamil-language tamilmurasu.com.sg — the translingual coverage is the point, not a side effect.
+                  </p>
+                  <div
+                    className="bg-muted rounded-lg overflow-hidden border border-accent-gold/10 cursor-zoom-in hover:opacity-90 transition-opacity"
                     onClick={(e) => handleImageClick("/worldwidenews-architecture.png", e)}
                   >
                     <img
